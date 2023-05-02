@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+function proc1() {
+	let today = new Date();
+	
+	let  
+}
+
+</script>
+<body>
+<input type="button" value="확인" onclick="proc1()">
+</body>
+</html>

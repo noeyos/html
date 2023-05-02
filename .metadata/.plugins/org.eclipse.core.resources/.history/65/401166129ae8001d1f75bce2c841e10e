@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script>
+function proc1() {
+	let su1 = parseInt(prompt("정수1입력"));
+	let su2 = parseInt(prompt("정수2입력"));
+	
+	let op = prompt("연산자 입력");
+	
+	let res = "";
+	
+	switch(op) {
+	case"+":
+		res = su1 + su2;
+		break;
+	case"-":
+		res = su1 - su2;
+		break;
+	case"*":
+		res = su1 * su2;
+		break;
+	case"/":
+		res = su1 / su2;
+		break;
+	
+	
+	}
+	
+	str = `${su1} ${op} ${su2} = ${res}`;
+	
+	document.querySelector('#result1').innerHTML = str;
+	
+}
+
+function proc2() {
+	let score = parseInt(prompt("점수 입력"));
+	
+	let grade = "";
+	switch(score) {
+	case (score>=90 || score<=100):
+		grade = "A";
+	break;
+	case (score<=89 && score>=80):
+		grade = "B";
+	break;
+	case (score<=79 && score>=70):
+		grade = "C";
+	break;
+	case (score<=69 && score>=60):
+		grade = "D";
+	break;
+	case (score<=59 && score>=0):
+		grade = "F";
+	break;
+	default:
+		"잘못된 입력입니다."
+		
+	}
+	
+	str = `${score}점의 학점은 ${grade}입니다.`
+}
+</script>
+</head>
+<body>
+<div class="box">
+	<h3>prompt를 이용하여 2개의 수와 연산자를 입력한다</h3>
+	<h3>연산자를 비교(switch)하여 계산 후 결과를 출력한다</h3>
+	
+	<input type="button" value="확인" onclick="proc1()">
+	<br><br>
+	<div id="result1" class="result"></div>
+</div>
+
+<div class="box">
+	<h3>prompt를 이용하여 점수를 입력하여 학점을 출력한다</h3>
+	<h3>점수를 비교(switch)하여 결과(A~F)를 출력한다</h3>
+	
+	<input type="button" value="확인" onclick="proc2()">
+	<br><br>
+	<div id="result2" class="result"></div>
+</div>
+</body>
+</html>

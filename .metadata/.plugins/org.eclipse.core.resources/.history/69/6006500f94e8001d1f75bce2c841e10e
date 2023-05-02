@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" href="../css/mystyle.css">
+
+<script type="text/javascript">
+function proc1() {
+	// 두개의 수와 연산자를 입력
+	su1 = parseInt(prompt("정수1입력"));
+	su2 = parseInt(prompt("정수2입력"));
+	
+	op = prompt("연산자 입력");
+}
+</script>
+
+</head>
+<body>
+<div class="box">
+	<h3>prompt를 이용하여 2개의 수와 연산자를 입력한다</h3>
+	<h3>연산자를 비교하여 계산 후 결과를 출력한다</h3>
+	
+	<input type="button" value="확인">
+	<br><br>
+	<div id="result1" class="result">
+	
+	
+	</div>
+	
+</div>
+</body>
+</html>

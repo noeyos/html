@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let today = new Date();
+	
+	window.alert(today);
+	document.write(today);
+	console.log(today);
+	
+	
+
+</script>
+<style>
+div {
+	border: 1px solid blue;
+}
+</style>
+</head>
+<body>
+
+	<div>
+	
+	</div>
+
+</body>
+</html>

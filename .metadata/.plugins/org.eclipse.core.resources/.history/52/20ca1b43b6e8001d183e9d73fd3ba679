@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+header, nav, aside, section, footer {
+	box-sizing: border-box;
+}
+
+header {
+	height: 100px;
+	text-align: center;
+}
+
+header h1 img {
+	width: 70px;
+	height: 70px;
+}
+
+/* 스마트폰처럼 가로폭이 짧은 기기에서 실행했을 때 한줄로(밑으로) 쭉 출력되게 */
+@media screen and (max-width: 600px) {
+	aside, section {
+		width: 100%;
+	}
+}
+
+</style>
+</head>
+<body>
+<div> 
+<header>
+	<h1>
+		<img src="../images/shoppingbag.png" alt="shoppingbag.png">
+		<a href="main.html">Web Shopping</a>
+	</h1>
+</header>
+
+<nav>
+	<ul>
+		<li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">Contacts</a></li>
+    </ul>
+</nav>
+
+<aside id="left">
+
+</aside>
+
+<section>
+	<article>
+	
+	</article>
+</section>
+
+<aside id="right">
+
+</aside>
+
+<footer>
+
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+h1 {
+	background-color : red;
+}
+
+pre {
+	border: 4px double blue;
+	border-left: none;
+	border-right: none;
+	background: silver;
+	padding: 10px;
+	margin: 10px;
+}

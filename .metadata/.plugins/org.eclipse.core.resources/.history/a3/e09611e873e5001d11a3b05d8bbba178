@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+header, aside, section, footer {
+	box-sizing: border-box;
+	border-radius: 30px;
+	margin: 2px;
+}
+
+header {
+	height: 150px;
+	background: yellow;
+	text-align: center;
+	padding: 10px;
+	
+}
+
+footer {
+	height: 50px;
+	background: lavender;
+	clear: both;
+	text-align: center;
+}
+
+aside {
+	width: calc(30% - 1px);
+	height: 400px;
+	background: pink;
+	float: left;
+	padding: 20px;
+}
+
+section {
+	width: calc(69% - 1px);
+	height: 400px;
+	background: #99FFFF;
+	float: left;
+	padding : 10px;
+}
+
+.div {
+	border: 3px dotted green;
+	background : lightgreen;
+	padding: 15px;
+	margin: 10px;
+	border-radius: 20px;
+}
+
+li {
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+</style>
+</head>
+<body>
+	<header>
+		<h1>My Blog Page</h1>
+		<p>시멘틱 태그로 만들어진 페이지입니다.</p>
+	</header>
+
+	<aside>
+		<h2>Links</h2>
+
+		<ul>
+			<li>w3schools</li>
+			<li>Naver</li>
+			<li>Daum</li>	
+		</ul>
+	</aside>
+
+	<section>
+		<div class="div">
+		<h3>Semantic Tags</h3>
+		<p>시멘틱 요소(Semantic elements)들은 브라우저에게 요소의 의미나 목적을 명확하게 알려주는 요소이다. 레이아웃을 만들때 쓰는 것. 의미가 있는 요소라면 div보다는 시멘틱 태그를 사용한다.</p>
+		</div>
+		<div class="div">
+		<h3>div와 span</h3>
+		<p>div은 "divide"의 약자로서 페이지를 논리적인 섹션으로 분리하는데 사용되는 태그이다. span요소는 인랑니 요소로서 텍스트를 위한 컨테이너로 사용할 수 있다.</p>
+		</div>
+	</section>
+	
+	<footer>Copyright (c)2019 Hong</footer>
+</body>
+</html>

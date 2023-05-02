@@ -1,0 +1,125 @@
+
+4월 20, 2023 10:13:11.790 NEW SESSION
+4월 20, 2023 10:13:11.790 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 20, 2023 20:58:43.855 NEW SESSION
+4월 20, 2023 20:58:43.855 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 20, 2023 21:00:53.815 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 20, 2023 21:03:20.303 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 20, 2023 21:03:58.329 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 20, 2023 21:04:09.761 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 20, 2023 21:07:04.322 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 21, 2023 09:18:12.547 NEW SESSION
+4월 21, 2023 09:18:12.547 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 21, 2023 09:46:01.256 NEW SESSION
+4월 21, 2023 09:46:01.256 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 21, 2023 10:18:23.273 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+
+4월 21, 2023 10:21:51.575 NEW SESSION
+4월 21, 2023 10:21:51.575 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 21, 2023 10:51:27.484 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 21, 2023 11:05:26.230 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 21, 2023 11:07:01.20 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 21, 2023 11:12:10.615 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 21, 2023 12:11:58.787 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 24, 2023 09:27:43.109 NEW SESSION
+4월 24, 2023 09:27:43.109 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 25, 2023 09:16:05.688 NEW SESSION
+4월 25, 2023 09:16:05.688 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 25, 2023 10:18:32.14 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 25, 2023 11:49:52.608 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+
+4월 25, 2023 11:52:46.677 NEW SESSION
+4월 25, 2023 11:52:46.677 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 25, 2023 13:58:16.666 NEW SESSION
+4월 25, 2023 13:58:16.667 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 26, 2023 09:31:09.429 NEW SESSION
+4월 26, 2023 09:31:09.429 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 26, 2023 09:47:46.17 [16296:11648:0426/094746.016:ERROR:sharing_service.cc(252)] Device un-registration failed with fatal error
+4월 26, 2023 12:26:47.316 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 26, 2023 13:25:35.592 [2388:14396:0426/132535.592:ERROR:connection_factory_impl.cc(472)] ConnectionHandler failed with net error: -2
+4월 26, 2023 13:35:42.252 [2388:14396:0426/133542.252:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -105
+4월 26, 2023 13:35:43.739 [2388:14396:0426/133543.738:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -105
+4월 26, 2023 13:35:46.942 [2388:14396:0426/133546.941:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -105
+
+4월 27, 2023 09:07:14.852 NEW SESSION
+4월 27, 2023 09:07:14.852 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 27, 2023 11:06:55.232 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 27, 2023 11:11:19.965 NEW SESSION
+4월 27, 2023 11:11:19.965 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 28, 2023 09:08:16.320 NEW SESSION
+4월 28, 2023 09:08:16.320 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 28, 2023 10:21:58.852 [1564:7984:0428/102158.852:ERROR:cert_verify_proc_builtin.cc(677)] CertVerifyProcBuiltin for api.lunamedia.io failed:
+4월 28, 2023 10:21:58.852 ----- Certificate i=0 (CN=*.lunamedia.io) -----
+4월 28, 2023 10:21:58.852 ERROR: Time is after notAfter
+4월 28, 2023 10:21:58.852 
+4월 28, 2023 10:21:58.853 
+4월 28, 2023 10:25:25.613 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+
+5월 01, 2023 09:04:03.262 NEW SESSION
+5월 01, 2023 09:04:03.262 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2023 09:42:26.979 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2023 09:42:40.593 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2023 09:43:36.131 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2023 10:10:12.63 [15076:7296:0501/101012.063:ERROR:interface_endpoint_client.cc(695)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 01, 2023 11:07:24.101 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2023 11:08:17.106 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2023 11:29:02.989 [12660:10916:0501/112902.989:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+5월 01, 2023 11:45:47.170 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 01, 2023 12:32:36.700 NEW SESSION
+5월 01, 2023 12:32:36.700 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 02, 2023 09:25:56.996 NEW SESSION
+5월 02, 2023 09:25:56.996 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 02, 2023 09:46:09.764 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 02, 2023 10:43:26.04 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 02, 2023 11:21:05.317 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 02, 2023 11:22:43.297 [16808:17172:0502/112243.297:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:43.985 [16808:17172:0502/112243.985:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:44.126 [16808:17172:0502/112244.126:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:44.231 [16808:17172:0502/112244.231:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:44.394 [16808:17172:0502/112244.394:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:44.649 [16808:17172:0502/112244.649:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:44.955 [16808:17172:0502/112244.955:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:45.582 [16808:17172:0502/112245.582:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:45.894 [16808:17172:0502/112245.894:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:47.171 [16808:17172:0502/112247.171:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:47.312 [16808:17172:0502/112247.312:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:47.516 [16808:17172:0502/112247.516:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:48.402 [16808:17172:0502/112248.402:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:48.795 [16808:17172:0502/112248.795:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:49.327 [16808:17172:0502/112249.327:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:49.727 [16808:17172:0502/112249.727:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:49.832 [16808:17172:0502/112249.831:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:49.952 [16808:17172:0502/112249.952:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:50.72 [16808:17172:0502/112250.072:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:50.363 [16808:17172:0502/112250.363:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:50.947 [16808:17172:0502/112250.946:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:51.551 [16808:17172:0502/112251.551:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:52.211 [16808:17172:0502/112252.211:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:52.376 [16808:17172:0502/112252.376:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:52.488 [16808:17172:0502/112252.488:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:52.659 [16808:17172:0502/112252.659:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:52.662 [16808:17172:0502/112252.662:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:22:52.670 [16808:17172:0502/112252.670:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.246 s for first_image_paint 0.229 s
+5월 02, 2023 11:24:39.226 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+5월 02, 2023 11:24:52.218 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+5월 02, 2023 12:05:46.685 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+5월 02, 2023 12:12:01.455 [16808:1376:0502/121201.454:ERROR:cert_verify_proc_builtin.cc(677)] CertVerifyProcBuiltin for simpleicon.com failed:
+5월 02, 2023 12:12:01.455 ----- Certificate i=0 (CN=www.iconsmind.com) -----
+5월 02, 2023 12:12:01.455 ERROR: Time is after notAfter
+5월 02, 2023 12:12:01.455 
+5월 02, 2023 12:12:01.455 
+5월 02, 2023 12:17:27.718 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+
+5월 02, 2023 17:12:30.631 NEW SESSION
+5월 02, 2023 17:12:30.631 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.

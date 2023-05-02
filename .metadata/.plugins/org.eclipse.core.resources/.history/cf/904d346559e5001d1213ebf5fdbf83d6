@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li><a href="">Home</a></li>
+		<li><a href="">Project</a></li>
+		<li><a href="">Notice</a></li>
+		<li><a href="">QnA</a></li>
+	</ul>
+
+</body>
+</html>
