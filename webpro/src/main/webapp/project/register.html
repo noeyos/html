@@ -5,7 +5,20 @@
 <title>WEB SHOP</title>
 <link rel="stylesheet" href="css/mystyle.css">
 <link rel="icon" href="images/picture.png">
+
+<script>
+    function idCheck() {
+        alert("사용 가능한 아이디입니다.")
+    }
+    
+    function proc() {
+        alert("회원가입이 완료되었습니다!")
+    }
+
+</script>
+
 </head>
+
 <body>
 <div> 
 <header>
@@ -32,7 +45,7 @@
                 <legend>회원 정보 입력</legend>
                 <label for="id">아이디</label>
 			    <input type="text" name="id" id="id" class="signup">
-                <input type="button" value="중복검사" name="check" id="idcheck" class="signbotton" onclick="check()">
+                <input type="button" value="중복검사" name="check" id="idcheck" class="signbotton" onclick="idCheck()">
 			    <br>
 			
 			    <label for="pass">패스워드</label>
@@ -64,8 +77,8 @@
 			    <br>
 
                 <label for="gender">성별</label>
-			    <input type="radio" value="female" name="gender" id="gender"> <span class="gender">남성</span> &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" value="male" name="gender" id="gender"> <span class="gender">여성</span>
+			    <input type="radio" value="male" name="gender" id="male"> <span class="gender">남성</span> &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="female" name="gender" id="female"> <span class="gender">여성</span>
 			    <br>
 
                 <div id="signUpBotton">
@@ -84,11 +97,4 @@ copyright © 2023 Lee Soyeon all rights reserved
 </footer>
 </div>
 </body>
-
-<script>
-function proc() {
-    alert("회원가입이 완료되었습니다!")
-}
-</script>
-
 </html>
