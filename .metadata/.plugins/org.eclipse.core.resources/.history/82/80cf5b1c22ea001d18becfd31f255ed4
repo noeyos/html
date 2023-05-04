@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function calc(btn) {
+	
+	v1 = btn.getAttribute('value');
+	
+	switch(v1) {
+	case "+":
+		num = add(x, y);
+		break;
+	case "-":
+		num = sub(x, y);
+		break;
+	case "*":
+		num = multi(x, y);
+		break;
+	case "/":
+		num = divide(x, y);
+		break;
+	}
+	
+}
+</script>
+</head>
+<body>
+<body>
+   <form>
+      첫번째 :<input id="x"><br>
+      두번째 :<input id="y"><br>
+      결과 :<input id="sum"><br>
+      <br>
+      <input type="button"  onclick="calc(this)" value="+">
+      <input type="button"  onclick="calc(this)" value="-">
+      <input type="button"  onclick="calc(this)" value="*">
+      <input type="button"  onclick="calc(this)" value="/"><br>
+      <br>
+      <p>첫번째 값 :<span id="sp1"></span> </p>
+      <p>두번째 값 :<span id="sp2"></span> </p>
+      <p>결과 :<span id="sp3"></span> </p>     
+    </form>
+</body>
+</body>
+</html>

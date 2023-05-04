@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script>
+proc1 = () => {
+	
+}
+
+</script>
+</head>
+<body>
+	<div class="box">
+		<h3>리터럴 배열 const fruits = ["apple", "banana", "peach"]; <br><br>
+		const fruits = [];<br>
+		fruits[0] = "파인애플"; fruits[1] = "수박";
+		
+		</h3>
+
+		<input type="button" value="확인" onclick="proc1()"> <br> <br>
+
+		<div id="result1" class="result"></div>
+	</div>
+
+	<div class="box">
+		<h3>array 배열 객체 const fruits = new Array(); <br>
+		array 배열 객체 const fruits = new Array(5); <br>
+		fruits[0] = "파인애플"ㅣ fruits[1] = "수박" <br><br>
+		array 배열 객체 const fruits = new Array("사과", "바나나", "복숭아");
+		</h3>
+
+		<input type="button" value="확인" onclick="proc1()"> <br> <br>
+
+		<div id="result2" class="result"></div>
+	</div>
+</body>
+</html>

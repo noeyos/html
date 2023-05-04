@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script>
+proc3 = () => {
+	
+	sum = 0; // 누적변수
+	sustr = "";
+	
+	while(true) {
+		// 입력
+		vinput = parseInt(prompt("숫자를 입력하세요"));
+		
+		
+		// 입력값이 0이면 break;
+		if(vinput == 0) break;
+		
+		
+		// 아니면 입력값을 더한다
+		sum += vinput;
+		sustr += vinput + " ";
+		
+	}
+	
+	// 출력 내용
+	str = "입력된 값들 : " + sustr + "<br>";
+	str += "더한 합 : " + sum
+	
+	
+	// 출력
+	document.getElementById('result3').innerHTML = str;
+	
+}
+
+proc2 = () => {
+	iksu = "";
+	for(i=1; i<10; i++) {
+		for(k=1;k<10;k++) {
+			if((i+k)%3==0){
+				iksu += i + " " + k + "<br>";			}
+		}
+	}
+// 출력
+document.getElementById('result2').innerHTML = iksu;
+	
+}
+
+</script>
+</head>
+<body>
+	<div class="box">
+		<h3>입력한 숫자의 합</h3>
+
+		<input type="button" value="확인" onclick="proc3()"> <br> <br>
+
+		<div id="result3" class="result"></div>
+	</div>
+	<div class="box">
+		<h3>두번째 문제</h3>
+
+		<input type="button" value="확인" onclick="proc2()"> <br> <br>
+
+		<div id="result2" class="result"></div>
+	</div>
+</body>
+</html>

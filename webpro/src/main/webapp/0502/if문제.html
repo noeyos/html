@@ -33,6 +33,38 @@ function proc1() {
 	document.querySelector('#result1').innerHTML = str;
 	
 }
+
+function proc2() {
+	
+	// 입력
+	let user1 = prompt("첫번재 사람 입력");
+	let user2 = prompt("두번재 사람 입력");
+	
+	
+	// 비교 
+	let res = "";
+	if(user1 == user2) {
+		res = "비김"
+	} else if(user1 == "가위" && user2 == "보"   ||
+			  user1 == "바위" && user2 == "가위" ||
+			  user1 == "보"   && user2 == "바위" ) {
+		res = "user1이김"
+	} else {
+		res = "user2이김"
+	}
+	
+	
+	
+	// 출력 내용
+	str = "첫번째 사람 : " + user1 + "<br>";
+	str += "두번째 사람 : " + user2 + "<br>";
+	str += "결과: " + res + "<br>";
+	
+	// 출력
+	document.querySelector('#result2').innerHTML = str;
+	
+}
+
 </script>
 
 </head>
@@ -43,10 +75,17 @@ function proc1() {
 	
 	<input type="button" value="확인" onclick="proc1()">
 	<br><br>
-	<div id="result1" class="result">
+	<div id="result1" class="result"></div>
 	
+</div>
+
+<div class="box">
+	<h3>prompt를 이용하여 가위바위보</h3>
+	<h3>연산자를 비교하여 결과를 출력</h3>
 	
-	</div>
+	<input type="button" value="확인" onclick="proc2()">
+	<br><br>
+	<div id="result2" class="result"></div>
 	
 </div>
 </body>

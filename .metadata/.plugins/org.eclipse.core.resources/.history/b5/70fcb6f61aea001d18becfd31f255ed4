@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function calc(a) {
+	
+	const x = parseInt(document.querySelector('#x').value);
+	const y = parseInt(document.querySelector('#y').value);
+	num = 0;
+	
+	switch(a) {
+	case "+":
+		num = add(x, y);
+		break;
+	case "-":
+		num = sub(x, y);
+		break;
+	case "*":
+		num = multi(x, y);
+		break;
+	case "/":
+		num = divide(x, y);
+		break;
+	}
+	
+	document.querySelector("#sp3").innerHTML = num;
+	
+}
+
+function add(a, b) {
+	return a+b;
+}
+
+function sub(a, b) {
+	return a-b;
+}
+
+function multi(a, b) {
+	return a*b;
+}
+
+function divide(a, b) {
+	return a/b;
+}
+</script>
+</head>
+<body>
+   <form>
+      첫번째 :<input id="x"><br>
+      두번째 :<input id="y"><br>
+      결과 :<input id="sum"><br>
+      <br>
+      <input type="button"  onclick="calc('+')" value="+">
+      <input type="button"  onclick="calc('-')" value="-">
+      <input type="button"  onclick="calc('*')" value="*">
+      <input type="button"  onclick="calc('/')" value="/"><br>
+      <br>
+      <p>첫번째 값 :<span id="sp1"></span> </p>
+      <p>두번째 값 :<span id="sp2"></span> </p>
+      <p>결과 :<span id="sp3"></span> </p>     
+    </form>
+</body>
+</html>
