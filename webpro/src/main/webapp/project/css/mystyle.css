@@ -1,6 +1,16 @@
 @charset "UTF-8";
 
 @font-face {
+<<<<<<< HEAD
+=======
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+>>>>>>> origin/main
     font-family: 'ClimateCrisisKRVF';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/ClimateCrisisKRVF.woff2') format('woff2');
     font-weight: normal;
@@ -81,7 +91,10 @@ nav ul li a {
 
 #center {
 	display: flex;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 }
 
 #left {
@@ -102,8 +115,12 @@ nav ul li a {
 	height: 50px;
 	border-collapse: collapse;
 	text-align: center;
+<<<<<<< HEAD
 
 	margin: 15px auto;
+=======
+	padding: 15px;
+>>>>>>> origin/main
 	
 	
 }
@@ -111,7 +128,10 @@ nav ul li a {
 .category {
 	text-decoration: none;
 	color: white;
+<<<<<<< HEAD
 	font-size: 17px;
+=======
+>>>>>>> origin/main
 }
 
 
@@ -139,13 +159,21 @@ iframe {
 	margin: 50px;
 }
 
+<<<<<<< HEAD
 #loginID, #loginPW {
+=======
+input[type="text"], input[type="password"] {
+>>>>>>> origin/main
 	border: none;
 	height: 21px;
 	margin-top: 5px;
 }
 
+<<<<<<< HEAD
 .blackbotton, .cartbotton {
+=======
+input[type="button"], input[type="reset"] {
+>>>>>>> origin/main
 	border: 1px solid black;
 	border-radius: 25px;
 	padding: 5px 10px;
@@ -170,6 +198,7 @@ footer {
 	font-family: 'Pretendard-Regular', sans-serif;
 }
 
+<<<<<<< HEAD
 #cart, #signUp {
 	text-align: center;
 	padding-top: 50px;
@@ -286,6 +315,8 @@ label {
 
 
 
+=======
+>>>>>>> origin/main
 /* 스마트폰처럼 가로폭이 짧은 기기에서 실행했을 때 한줄로(밑으로) 쭉 출력되게 */
 @media screen and (max-width: 600px) {
 	nav, aside, section {
