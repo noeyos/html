@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    }
+
+    body {
+        font-family: 'Pretendard-Regular', sans-serif;
+    }
+
+    .group {
+        border: 1px solid lightgrey;
+        margin: 20px;
+        padding: 10px;
+        width: 250px;
+        height: 490px;
+        position: relative;
+    }
+
+    #div {
+        display: flex;
+    }
+
+    img {
+        width: 250px;
+    }
+
+    #im, #mb {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    input[type="button"] {
+        border: 1px solid lightgrey;
+        padding: 5px;
+        border-radius: 4px;
+        background: #F2F2F2;
+        font-family: 'Pretendard-Regular', sans-serif;
+        position: absolute;
+        bottom: 15px;
+        right:15px;
+    }
+
+</style>
+</head>
+<body>
+    <div id="div">
+        <div id = "d1" class="group">
+          <img src="images/수납장.PNG" alt="수납장.PNG" id="cabinet">
+          <p><span>콜비에른 수납장</span><br><br>
+            발코니에 놓고 화분과 원예용품을 보관하거나 현관에 놓고 신발을 수납하거나
+            욕실에 놓고 샴푸와 수건을 정리해 놓기 좋습니다.
+            위쪽에 콜비에른 선반유닛을 추가할 수 있습니다. <br><br>
+            가격 : 69,000원<br></p>
+            <input type="button" value="쇼핑카트에 추가하기">
+        </div>
+
+        <div id = "d2" class="group">
+            <img src="images/협탁.PNG" alt="협탁.PNG" id="sidetable">
+            <p><span>네스나 침대 협탁</span><br><br>
+                견고한 유리상판이 있는 침대협탁은 즐겨 사용하는 암체어 옆에 놓아도 아주 편리합니다.
+                튼튼한 천연 소재인 대나무로 만들어서 따뜻하고 안락한 분위기를 연출할 수 있습니다.<br><br>
+                가격 : 17,900원<br></p>
+                <input type="button" value="쇼핑카트에 추가하기">
+        </div>
+        
+        <div id = "d3" class="group">
+            <img src="images/조명.PNG" alt="조명.PNG" id="stand">
+            <p><span>세타 머쉬룸 스탠드</span><br><br>
+                유럽 등기구의 클래식함이 묻어있는 세련되고 유니크한 버섯 모양의 디자인으로
+                직접등으로도 간접등으로도 빛을 퍼지도록 설계되었으며, 4개의 전구를 사용하여 충분한 빛을 만듭니다.<br><br>
+                가격 : 36,900원<br></p>
+                <input type="button" value="쇼핑카트에 추가하기">
+        </div>
+    </div>
+</body>
+</html>

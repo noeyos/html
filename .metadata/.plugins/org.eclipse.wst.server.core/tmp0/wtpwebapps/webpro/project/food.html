@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    }
+
+    body {
+        font-family: 'Pretendard-Regular', sans-serif;
+    }
+
+    .group {
+        border: 1px solid lightgrey;
+        margin: 20px;
+        padding: 10px;
+        width: 250px;
+        height: 450px;
+        position: relative;
+    }
+
+    #div {
+        display: flex;
+    }
+
+    img {
+        width: 250px;
+    }
+
+    #im, #mb {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    input[type="button"] {
+        border: 1px solid lightgrey;
+        padding: 5px;
+        border-radius: 4px;
+        background: #F2F2F2;
+        font-family: 'Pretendard-Regular', sans-serif;
+        position: absolute;
+        bottom: 15px;
+        right:15px;
+    }
+
+</style>
+</head>
+<body>
+    <div id="div">
+        <div id = "d1" class="group">
+          <img src="images/콜롬비아.jpg" alt="콜롬비아.jpg" id="colombia">
+          <p><span>콜롬비아 250g</span><br><br>
+            견과류의 풍미를 간직한 부드럽고 균형 잡힌 커피 <br><br>
+            가격 : 16,000원<br></p>
+            <input type="button" value="쇼핑카트에 추가하기">
+        </div>
+
+        <div id = "d2" class="group">
+            <img src="images/파이크플레이스.jpg" alt="파이크플레이스.jpg" id="pikeplace">
+            <p><span>파이크 플레이스™ 로스트 250g</span><br><br>
+                부드러운 뒷맛이 특징이며 은은한 코코아와 구운 견과류 향이 특징인 커피<br><br>
+                가격 : 15,000원<br></p>
+                <input type="button" value="쇼핑카트에 추가하기">
+        </div>
+    </div>
+</body>
+</html>
