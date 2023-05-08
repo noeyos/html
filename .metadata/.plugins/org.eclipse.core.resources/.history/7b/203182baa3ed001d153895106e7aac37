@@ -9,12 +9,12 @@ function Circle(rad) {
 	this.rad = rad;
 	
 	this.getArea = function() {
-		return this.rad * this.rad * Math.PI;
+		return rad * rad * 3.14;
 	}
 }
 
 Circle.prototype.getCircum = function() {
-	return 2 * Math.PI * this.rad;
+	return 2 * MATH.PI * rad;
 }
 
 function proc1() {
@@ -46,7 +46,7 @@ function proc1() {
 
 
 3.	Circle 객체를 생성한다
-	각 객체 속에 이름 속성을 추가한다. - prototype이 아니다
+	각 객체 속에 이름 속성을 추가한다. - prototoye이 아니다
 	
 4.	이름, 반지름, 면적, 둘레를 출럭한다  - 출력함수를 정의하여 호출한다
 

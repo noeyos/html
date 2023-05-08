@@ -9,12 +9,12 @@ function Circle(rad) {
 	this.rad = rad;
 	
 	this.getArea = function() {
-		return this.rad * this.rad * Math.PI;
+		return rad * rad * 3.14;
 	}
 }
 
 Circle.prototype.getCircum = function() {
-	return 2 * Math.PI * this.rad;
+	return 2 * 3.14 * this.rad;
 }
 
 function proc1() {
