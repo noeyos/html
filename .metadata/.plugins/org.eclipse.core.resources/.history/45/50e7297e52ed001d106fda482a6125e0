@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script>
+arr = ["사과", "바나나", "복숭아", "참외", "사과", "파인애플", "수박", "사과"];
+</script>
+</head>
+<body>
+	<div class="box">
+		<h3>찾기</h3>
+
+		<input type="button" value="indexOf" onclick="proc1()"> 
+		<input type="button" value="lastIndexOf" onclick="proc2()"> 
+		<input type="button" value="여러개 찾기" onclick="proc3()"> 
+		<div id="result1" class="result"></div>
+		<div id="result2" class="result"></div>
+		<div id="result3" class="result"></div>
+	</div>
+</body>
+</html>

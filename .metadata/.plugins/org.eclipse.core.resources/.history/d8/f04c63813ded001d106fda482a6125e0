@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script>
+// 속성 
+const rect = {
+	garo : 5,
+	sero : 3,
+	
+	getArea() {
+		return this.garo * this.sero;
+	},
+	
+	getCircum() {
+		return parseInt((this.garo + this.sero)) * 2;
+	}
+		
+}
+</script>
+</head>
+<body>
+	<div class="box">
+		<h3>객체의 속성과 메소드를 동적으로 추가</h3>
+		<h3>const rect = { }</h3>
+		<input type="button" value="확인" onclick="proc3()">
+		<div id="result1" class="result"></div>
+	</div>
+</body>
+</html>
