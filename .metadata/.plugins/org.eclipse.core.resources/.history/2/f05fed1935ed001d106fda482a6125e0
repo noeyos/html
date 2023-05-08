@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+const myCar = {
+	color: 'red',
+	name : 'bmw',
+	speed : 100,
+	
+	brake : function() {
+		this.speed = this.speed + 10;
+	},
+	accel : function() {
+		this.speed -= 10;
+	}
+	
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="">
+<div id="result1"></div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+
+
+</script>
+</head>
+<body>
+	생성자 함수를 이용한 객체를 정의한다
+	함수 이름은 Circle로 한다
+	속성: rad를 정의 - 반지름을 뜻하는 속성 이름
+	메소드: getArea() 함수 정의 - 리턴 면적값을 계산하여 리턴
+	
+</body>
+</html>
