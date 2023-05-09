@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    }
+
+    body {
+        font-family: 'Pretendard-Regular', sans-serif;
+    }
+
+    .group {
+        border: 1px solid lightgrey;
+        margin: 20px;
+        padding: 10px;
+        width: 250px;
+        height: 475px;
+        position: relative;
+    }
+
+    #div {
+        display: flex;
+    }
+
+    img {
+        width: 250px;
+    }
+
+    #im, #mb {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    input[type="button"] {
+        border: 1px solid lightgrey;
+        padding: 5px;
+        border-radius: 4px;
+        background: #F2F2F2;
+        font-family: 'Pretendard-Regular', sans-serif;
+        position: absolute;
+        bottom: 15px;
+        right:15px;
+    }
+
+</style>
+</head>
+<body>
+    <div id="div">
+        <div id = "d1" class="group">
+          <img src="images/자전거.jpg" alt="자전거.jpg" id="cycle">
+          <p><span>엘파마 벤토르 V4000</span><br><br>
+            벤토르는 산악 인증을 받은 프레임으로 보장된 건고함을 선사합니다. 
+            시마노 27단 변속 주행으로 평지 오르막 등 편리한 주행이 가능합니다. <br><br>
+            가격 : 690,000원<br></p>
+            <input type="button" value="쇼핑카트에 추가하기">
+        </div>
+
+        <div id = "d2" class="group">
+            <img src="images/골프채.jpg" alt="골프채.jpg" id="golf">
+            <p><span>오딧세이 화이트 핫 OG 퍼터</span><br><br>
+                출시된지 20년이 넘도록 절대적인 지지를 받는
+                인서트 화이트핫 OG 퍼터의 가장 큰 특징은 인서트입니다.<br><br>
+                가격 : 324,400원<br></p>
+                <input type="button" value="쇼핑카트에 추가하기">
+        </div>
+        
+        <div id = "d3" class="group">
+            <img src="images/텐트.jpg" alt="텐트.jpg" id="tent">
+            <p><span>코베아 몬스터 텐트</span><br><br>
+                개방감이 뛰어난 측면 6개의 윈도우와 2개의 전, 후면 윈도우를 통해
+                쾌적함과 실용성이 높은 텐트입니다.<br><br>
+                가격 : 649,000원<br></p>
+                <input type="button" value="쇼핑카트에 추가하기">
+        </div>
+    </div>
+</body>
+</html>

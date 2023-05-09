@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Table 만들기1</title>
+<style>
+table {
+	border : 10px inset red;
+	margin : 20px auto;
+}
+
+td {
+	width : 300px;	/*한 칸당 300*/
+	height : 50px;
+	text-align : center;
+}
+
+#tab1 {
+	border : 25px groove #99CCFF;
+}
+
+/*
+	tab2 테이블의 td를 지정하는 방법:
+	1. #tab2 td {}
+	2. #tab2 > tbody > tr > td {}
+	3. #tab2 tr td {}
+*/
+
+#tab2 td{
+	width : 200px;
+	height : 60px;
+}
+
+th {
+	height : 60px;
+	background : skyblue;
+}
+
+</style>
+</head>
+
+<body>
+	<table id = tab1 border="1">
+		<tr>
+			<td>제목1</td>
+			<td>제목2</td>
+			<td>제목3</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+	</table>
+	
+	<table id = tab2 border="1">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+	</table>	
+
+	<table id = tab3 border="1">
+		<tr>
+			<th>제목1</th>
+			<th>제목2</th>
+			<th>제목3</th>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+	</table>	
+		
+</body>
+</html>
