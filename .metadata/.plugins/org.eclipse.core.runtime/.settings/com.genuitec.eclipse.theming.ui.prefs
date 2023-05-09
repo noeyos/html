@@ -1,18 +1,13 @@
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=9a9b839a653fa3472953bc43cc3e116084d34729
+>>>>>>>=origin/main
 applyBackground=false
 approved.defs.file.last.changed.time=1649720987000
 configurationInstallLocation=/C\:/eclipse/
 eclipse.preferences.version=1
 iconcolormode=primary
 includeThemingInOomph=false
-<<<<<<< HEAD
-last.download.attempt.time=1683548485988
-lastConfiguration=1683548480026
-=======
-last.download.attempt.time=1683551262324
-lastConfiguration=1683551255990
->>>>>>> origin/main
+last.download.attempt.time=1683592270108
+lastConfiguration=1683592263489
 newinstall=true
 workbench.theme=Dark Gray

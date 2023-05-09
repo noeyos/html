@@ -31,12 +31,156 @@ function proc1() {
 }
 
 proc2 = function() {
+	fr = prompt("입력");
 	
+	str = `찾는 과일 : ${fr} <br>`;
+	
+	idx = arr.lastIndexOf(fr);
+	
+	if(index == -1) {
+		str += "배열에 존재하지 않습니다.";
+	} else {
+		str += `${idx}번째에 있습니다 <br>`;
+	}
+	
+	document.getElementById('result2').innerHTML = str;
 }
 
 proc3 = () => {
+	   
+	// 입력
+	fr=prompt("입력");
+	   
+	str = `찾는 과일 : ${fr} <br>`
+	   
+	flag = true;
+	   
+	idx = 0;
+	// str = "";   //찾은 결과를 누적시키는 변수 0, 4, 7 번째
+	while(true){
+	   
+		idx = arr.indexOf(fr, idx);  // idx = (사과, 0)
+	      
+	    if(idx == -1) {
+	       break;
+	    }   
+	      
+	    str += `${idx},  ` ;
+	    idx ++;
+	    flag = false;
+	      
+	}
+	
+	if (flag == false) {
+		comma = str.lastIndexOf(",");
+		str = str.slice(0, comma);
+		str += `번째 있습니다`;
+	} else {
+		str += `없습니다`;
+	}
+	   
+	document.getElementById('result3').innerHTML = str;
+
+}
+
+function proc4() {
+	// 배열에 추가 - push(a, b, c...)
+	console.log(arr);
+	
+	str = `원래 배열 ${arr} <br>`;
+	
+	arr.push("딸기", 100, 200);
+	str += `추가후 배열 : ${arr}`;
+	
+	document.getElementById('result4').innerHTML = str;
+
 	
 }
+
+proc5 = () => {
+	// 배열에서 - pop() { return ... }
+	
+	str = `원래 배열 ${arr} <br>`;
+	
+	popvalue = arr.pop()
+	
+	str += `삭제 요소 : ${popvalue} <br>`;
+	str += `삭제후 배열 : ${arr} <br>`;
+	
+	document.getElementById('result5').innerHTML = str;
+	
+}
+
+proc6 = () => {
+	// slice(a, b)
+	// 원래 배열은 안 바뀜
+	
+	newarr = arr.slice(1, 4);
+	
+	str = `원래 배열 ${arr} <br>`;
+	str += `새로운 배열 : ${newarr}`;
+	
+	document.getElementById('result6').innerHTML = str;
+}
+
+proc7 = () => {
+	// splice(index, n, a, b, c)
+	// 원래 배열 바뀜
+	
+	// splice(2, 1, 100, 200)
+	// splice(2, 0, 100, 200, 300)
+	// splice(2, 3); 
+	
+	str = `원래 배열 ${arr} <br>`;
+	
+	arr.splice(2, 1, 100, 200);
+	
+	str += `변경된 배열 : ${arr}`;
+	
+	document.getElementById('result7').innerHTML = str;
+	
+}
+
+proc8 = () => {
+	
+	arr2 = [100, 200, 300, 400, 500];
+	
+	str = `arr 배열 ${arr} <br>`;
+	str += `arr2 배열 ${arr2} <br>`;
+	
+	newarr = arr.concat(arr2);	
+	
+	str += `변경된 배열 : ${newarr}`;
+	
+	document.getElementById('result8').innerHTML = str;
+	
+}
+
+proc9 = () => {
+	str = `배열 길이 : ${arr.length} <br>`;
+	newstr = arr.join(" and ");
+	
+	str += `문자열 길이: ${newstr.length} <br>`;
+	
+	str += newstr;
+	document.getElementById('result9').innerHTML = str;
+	
+	str2 = "배열출력<br>";
+	
+	for(i=0; i<arr.length; i++) {
+		str2 += i + " : " + arr[i] + "<br>";
+		
+	}
+	
+	str2 += "문자열출력<br>";
+	for(i=0; i<newstr.length; i++) {
+		str2 += i + " : " + newstr[i] + "<br>";
+	}
+	
+	document.getElementById('result9').innerHTML += str2;
+	
+}
+
 
 </script>
 </head>
@@ -51,5 +195,33 @@ proc3 = () => {
 		<div id="result2" class="result"></div>
 		<div id="result3" class="result"></div>
 	</div>
+	
+	<div class="box">
+		<h3>추가 삭제</h3>
+
+		<input type="button" value="push" onclick="proc4()"> 
+		<input type="button" value="pop" onclick="proc5()"> 
+		<div id="result4" class="result"></div>
+		<div id="result5" class="result"></div>
+	</div>
+	
+	<div class="box">
+		<h3>자르기 / 배열수정</h3>
+
+		<input type="button" value="slice" onclick="proc6()"> 
+		<input type="button" value="splice" onclick="proc7()"> 
+		<div id="result6" class="result"></div>
+		<div id="result7" class="result"></div>
+	</div>
+	
+	<div class="box">
+		<h3>합치기 / 문자열변환</h3>
+
+		<input type="button" value="concat" onclick="proc8()"> 
+		<input type="button" value="join" onclick="proc9()"> 
+		<div id="result8" class="result"></div>
+		<div id="result9" class="result"></div>
+	</div>
+	
 </body>
 </html>
