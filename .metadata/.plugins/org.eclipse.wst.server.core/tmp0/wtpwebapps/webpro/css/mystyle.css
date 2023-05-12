@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 h1 {
-	background-color : red;
+	background-color : yellow;
 }
 
 pre {
@@ -22,7 +22,7 @@ pre {
 	
 }
 
-.box input[type=button] {
+.box input[type=button], .box button[type=button] {
 	background: blue;
 	color: white;
 	font-size: 20px;

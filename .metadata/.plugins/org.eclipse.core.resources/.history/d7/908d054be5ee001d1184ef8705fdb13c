@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script>
+today = new Date();
+
+function proc1() {
+	
+	// 입력
+	id = prompt("주민번호를 입력하세요.");
+	
+	// 자리별로 자르기
+	year = id.substr(0,2);
+	month = id.substr(2,2);
+	day = id.substr(4,2);
+	gender = id.substr(7,1);
+	
+	thisyear = today.getFullYear();
+	thisyy = String(thisyear).substr(2,2);
+	
+	
+	// 성별비교
+	if(gender == 1 || gender == 3) {
+		gender = "남자";
+	} else {
+		gender = "여자";
+	}
+	
+	
+	// 년도 2000/1900인지 비교
+   	if(year <= 99 && year > thisyy) {
+		year = 19 + year;
+	} else {
+		year = 20 + year;
+	}
+	
+	
+/*	
+  	주민번호 1/2 , 3/4로 구분하는 방법도 있음
+ 		
+	if(gender == "1" || gender == "2") {
+		yy = "19" + year;
+	} else if(gender == "3" || gender == "4") {
+		yy = "20" + year;
+	}
+*/
+	
+	
+	// 나이 계산
+	age = thisyear - year;
+	
+	
+	// 주민번호 출력용
+	code = id.substr(0,8);
+	
+	
+	// 출력 내용
+	str = `주민번호 : ${code}****** <br>`
+	str += `생일: ${year}년 ${month}월 ${day}일 <br>`;
+	str += `성별: ${gender} <br>`;
+	str += `나이: 만 ${age}세 <br>`;
+	
+	document.querySelector("#result1").innerHTML = str;
+	
+} 
+
+
+function proc2() {
+	
+	multi = "234567892345";
+	
+	vid = prompt("주민번호를 입력하세요.");
+	
+	id = vid.replace("-", "");
+
+	console.log(vid, id);
+	
+	
+	
+	
+	
+	
+	
+}
+
+</script>
+</head>
+<body>
+	<div class="box">
+		<h3>prompt로 주민등록번호를 입력 받아 생년월일과 성별, 나이를 출력하는 프로그램을 작성하시오.(110326-4432618)
+		</h3>
+		
+		<input type="button" value="확인" onclick="proc1()">
+		<div id="result1" class="result"></div>
+	</div>
+	<div class="box">
+		<h3>주민등록번호를 입력 받아 주민등록번호의 유효성을 검사하는 프로그램을 작성하시오.(ABCDEF-GHIJKLM)
+		</h3>
+		
+		<input type="button" value="확인" onclick="proc2()">
+		<div id="result2" class="result"></div>
+	</div>
+</body>
+</html>

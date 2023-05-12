@@ -162,3 +162,10 @@
 5월 09, 2023 10:50:13.05 [6828:1832:0509/105013.005:ERROR:interface_endpoint_client.cc(695)] Message 0 rejected by interface blink.mojom.WidgetHost
 5월 09, 2023 11:10:06.34 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 5월 09, 2023 11:27:50.131 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 11, 2023 12:49:54.774 NEW SESSION
+5월 11, 2023 12:49:54.774 [8628:10632:0511/124954.773:ERROR:command_buffer_proxy_impl.cc(325)] GPU state invalid after WaitForGetOffsetInRange.
+5월 11, 2023 12:49:54.776 [8628:10632:0511/124954.773:ERROR:command_buffer_proxy_impl.cc(325)] GPU state invalid after WaitForGetOffsetInRange.
+
+5월 12, 2023 09:15:12.990 NEW SESSION
+5월 12, 2023 09:15:12.990 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.

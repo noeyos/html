@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script>
+today = new Date();	// 전역객체
+
+function proc1() {
+	myday = new Date("1998.07.04");
+	
+	//getTime()을 이용해서 millisec값 구하기
+	totime = today.getTime();
+	mytime = myday.getTime();
+	
+	console.log(totime, mytime);
+	
+	times = totime - mytime;
+}
+
+</script>
+</head>
+<body>
+
+	<div class="box">
+		<h3>태어난 날로부터 현재까지의 날 수 구하기</h3>
+
+		<input type="button" value="확인" onclick="proc1()">
+		<div id="result1" class="result"></div>
+	</div>
+</body>
+</html>

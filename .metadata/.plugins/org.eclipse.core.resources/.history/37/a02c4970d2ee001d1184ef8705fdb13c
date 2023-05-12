@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script>
+</script>
+</head>
+<body>
+	<div class="box">
+		<h3>문자열추출</h3>
+
+		<input type="button" value="substring" onclick="proc1()">
+		<input type="button" value="slice" onclick="proc1()">
+		<input type="button" value="substr" onclick="proc1()">
+		<div id="result1" class="result"></div>
+		<div id="result2" class="result"></div>
+		<div id="result3" class="result"></div>
+	</div>
+</body>
+</html>

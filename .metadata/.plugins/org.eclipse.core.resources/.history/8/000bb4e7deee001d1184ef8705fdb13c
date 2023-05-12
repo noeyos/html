@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script>
+function proc1() {
+	
+	// 입력
+	id = prompt("주민번호를 입력하세요.");
+	name = prompt("이름을 입력하세요.");
+	
+	// 자리별로 자르기
+	year = id.substring(0,2);
+	month = id.substring(2,4);
+	day = id.substring(4,6);
+	gender = id.substring(7,8);
+	
+	
+	// 성별비교
+	
+	
+	// 년도 2000/1900인지 비교
+	
+	
+	// 나이 계산
+	
+	
+	// 출력 내용
+	
+} 
+</script>
+</head>
+<body>
+	<div class="box">
+		<h3>prompt로 주민등록번호를 입력 받아 생년월일과 성별, 나이를 출력하는 프로그램을 작성하시오.
+		</h3>
+		
+		<input type="button" value="확인" onclick="proc1()">
+		<div id="result1" class="result"></div>
+	</div>
+</body>
+</html>

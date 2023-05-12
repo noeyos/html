@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script>
+today = new Date();	// 전역객체
+
+function proc1() {
+	myday = new Date("1998.07.04");
+	
+	//getTime()을 이용해서 millisec값 구하기
+	totime = today.getTime();
+	mytime = myday.getTime();
+	
+	console.log(totime, mytime);
+	
+	times = totime - mytime;
+	
+	years = parseInt(times/1000/60/60/24/365);
+	
+	str = `오늘: ${today.toLocaleString()} <br>`;
+	str += `생일 : ${myday.toLocaleString()} <br>`;
+	str += `지금까지 ${years}년째 살고 있습니다.`;
+	
+	document.getElementById('result1').innerHTML = str;
+}
+
+proc2 = () => {
+	// 현재 날짜의 getTime() -> millisec값
+	totime = today.getTime();
+	
+	// 500일에 대한 millisec값 구하기
+	after500 = 500 * 1000 * 60 * 60 * 24;
+	
+	console.log(totime, after500);
+	
+	date = new Date(totime + after500);
+	
+	str = `오늘: ${today.toLocaleString()} <br>`;
+	str += `500일 후 : ${date.toLocaleString()} <br>`;
+	
+	document.getElementById('result2').innerHTML = str;
+	
+	
+	
+	
+	
+}
+</script>
+</head>
+<body>
+	<div class="box">
+		<h3>태어난 날로부터 현재까지의 날 수 구하기</h3>
+
+		<input type="button" value="확인" onclick="proc1()">
+		<div id="result1" class="result"></div>
+	</div>
+	
+	<div class="box">
+		<h3>현재로부터 500일 후의 날짜 구하기</h3>
+
+		<input type="button" value="확인" onclick="proc2()">
+		<div id="result2" class="result"></div>
+	</div>
+	
+	<div class="box">
+		<h3>현재로부터 100일 후의 날짜 구하기</h3>
+		
+		<input type="date" id="sel">
+		<input type="button" value="확인" onclick="proc2()">
+		<div id="result2" class="result"></div>
+	</div>
+</body>
+</html>

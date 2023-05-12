@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script>
+vstr = "대한민국 우리나라 좋은나라 대한민국";
+
+proc1 = () => {
+	sub = vstr.substring(1, 5);
+	printStr('result1');
+}
+
+function printStr(result) {
+	str = vstr + "<br>";
+	str += sub + "<br>";
+	document.getElementById(result);
+	
+}
+
+</script>
+</head>
+<body>
+	<div class="box">
+		<h3>문자열추출</h3>
+
+		<input type="button" value="substring" onclick="proc1()">
+		<input type="button" value="slice" onclick="proc2()">
+		<input type="button" value="substr" onclick="proc3()">
+		<div id="result1" class="result"></div>
+		<div id="result2" class="result"></div>
+		<div id="result3" class="result"></div>
+	</div>
+</body>
+</html>
