@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>내용가져오기</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.7.0.min.js"></script>
+
+<style>
+
+</style>
+
+</head>
+<body>
+	<div class="box">
+		<h3>내용 가져오기</h3>
+		<h3>$('body').html()</h3>
+		<h3>$('body').text()</h3>
+		
+		<input type="button" value="html" id="btn1">
+		<input type="button" value="text" id="btn2">
+		<div id="result1" class="result">result1</div>
+	</div>
+	
+	<div class="box">
+		<h3>내용 가져오기</h3>
+		<h3>$('body').html()</h3>
+		<h3>$('body').text()</h3>
+		
+		<input type="button" value="html" id="btn3">
+		<input type="button" value="text" id="btn4">
+		<div id="result1" class="result">result2</div>
+		<p><span>무궁화1</span></p>
+		<p><span>무궁화2</span></p>
+	</div>
+</body>
+<script>
+$(function() {
+	$('#btn3').on('click', function() {
+//		alert($('p').html());
+		
+		str = "";
+		
+		$('p').each(function(i, k) {
+			str += $(k).html() + "\n";	// alert에선 <br>태그 안 먹음.
+									 	// 줄 바꾸고 싶으면 '\n' 사용.
+		})
+		
+/* 	
+		$('p').each(function(i) {	
+			str += $(this).html() + "\n";
+		}) 
+		
+*/
+		
+		alert(str);
+	})
+	
+	$('#btn4').on('click', function() {
+		alert($('p').text());
+	})
+	
+	$('#btn1').on('click', function() {
+		// body태그의 html태그를 포함한 모든 문장
+		alert($('.box').html());
+	})
+	
+	$('#btn2').on('click', function() {
+		alert($('.box').text());
+	})
+})
+</script>
+</html>
