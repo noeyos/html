@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.7.0.min.js"></script>
+
+<script>
+$(document).ready(() => {
+	$('#btn1').on('click', () => {
+/* 		$('#result1 li:eq(5)').css('background', 'red');
+		$('#result1 li:first, #result1 li:last').css('background', 'yellow');
+		$('#result1 li:lt(4)').css('font-size', '2.0rem'); */
+		
+		$('#result1 li').eq(5).css('background', 'red');
+		$('#result1 li').filter(':first, :last').css('background', 'yellow');
+//		$('#result1 li').filter(':first')
+//		$('#result1 li').filter(':last')
+		$('#result1 li').filter(':lt(4)').css('font-size', '2.0rem');
+	})
+	
+	$('#btn2').on('click', function () {
+		$('#result2 tr:even').css('background', 'lightgreen')
+		$('#result2 tr').filter(':even').css('background', 'lightgreen')
+		
+		$('#result2 tr:odd').css('background', 'lightgrey')
+		$('#result2 tr').filter(':odd').css('background', 'lightgrey')
+		
+	})
+	
+	$('btn3').on('click', function() {
+		// jQuery가 포함된 span태그의 테두리 파랑
+		$('#result3 span:contains(jQuery)').css();
+		
+		// jQuery가 포함되지 않은 span태그의 테두리 빨강
+		$('#result3 span:not(:contains(jQuery))').css();
+		
+		// span을 갖는 div요소 태그의 테두리 그린
+		$('#result3 div:has(span)').css();
+		
+		// 아무것도 없는 빈 div태그의 테두리
+		$('#result3 div:empty').css();
+		
+		// div 후손 span 태그의 글자색 빨강, 크기 굵게
+		$('#result3 div span').css();
+	})
+})
+</script>
+
+<style>
+table {
+	border: 2px solid blue;
+}
+
+td {
+	width: 200px;
+	height: 50px;
+}
+</style>
+</head>
+<body>
+		
+	<div class="box">
+		<h3></h3>
+		
+		<input type="button" value="확인" id="btn1">
+		<div id="result1" class="result">
+			<ul>
+				<li>one</li>
+				<li>two</li>
+				<li>three</li>
+				<li>four</li>
+				<li>five</li>
+				<li>six</li>
+				<li>seven</li>
+				<li>eight</li>
+				<li>nine</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<div class="box">
+		<h3></h3>
+		
+		<input type="button" value="확인" id="btn2">
+		<div id="result2" class="result">
+			<table border="1">
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div class="box">
+		<h2></h2>
+		<input type="button" id="btn3" value="확인">
+		<div id="result3" class="result">
+			<div></div>
+			<div>
+				헬로우~~ <span>오늘도 즐겁게~열심히!</span>
+			</div>
+			<p>
+				Hello jQuery! <span>Thanks, jQuery!</span>
+			</p>
+			<div class="myClass">jQuery!</div>
+			<span class="notMyClass">쉬운 jQuery~~!</span>
+			<div></div>
+			<br> <br>
+			<hr color="blue">
+			<br>
+		</div>
+	</div>
+	
+</body>
+</html>

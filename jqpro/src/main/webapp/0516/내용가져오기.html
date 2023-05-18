@@ -49,9 +49,18 @@ $(function() {
 /* 	
 		$('p').each(function(i) {	
 			str += $(this).html() + "\n";
+			str += $('p').html() + "\n";
+			str += $('p').eq(i).html() + \n"   (p[i].innerHTML)
 		}) 
 		
 */
+		$('p').each(function(i, v) {
+			str += i + " : " + $(v).html() + "\n";
+		})
+		
+		$('p').each(function() {
+			str += $(this).html() + "\n";
+		})
 		
 		alert(str);
 	})

@@ -1,0 +1,26 @@
+전송
+
+<form action="aa.jsp" method = "post">
+
+input type=submit, button type=submit 할 때
+
+전송 안됨
+<form action="aa.jsp" method = "post" onsubmit="return false;">
+
+input type=submit, button type=submit 할 때
+
+전송 전에 script 실행
+<form action="aa.jsp" method = "post" onsubmit="return false;">
+
+button type=button / button type=button - onclick이벤트
+button type=submit / button type=submit - form 
+
+script에서
+	type=button일 때 $('input[type=button]').on('click', function(){})
+	
+	type=submit일 때 - form 이용
+	$('form').on('submit', function(){})
+
+스크립트에서 무언갈 동작하고 전송하려면 form submit 사용
+type button을 눌렀으면 onclick, type submit이라면 submit
+	
