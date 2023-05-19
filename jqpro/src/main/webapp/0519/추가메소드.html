@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.7.0.min.js"></script>
+
+<script>
+$(function(){
+	
+	imgarr = ["가구1.jpg", "coffee1.jpg", "Penguins.jpg", "Koala.jpg", "Jellyfish.jpg", 
+			"꽃.jpg", "무지게2.png", "소우주.jpg", "에스프레소.jpg", "임영웅2.png", "핫초코.jpg",
+			"임영웅3.png", "카푸치노.jpg", "커비.png"]
+	
+	$('#btn1').on('click',function() {
+		$('<p class="pp">Hello</p>');
+		// $('result1').append(ptag);
+		ptag.prependTo($('#result1'));
+	})
+	
+	$('#btn2').on('click',function() {
+		ptag = $('<p class="pp">Hello</p>');
+		// $('result1').append(ptag);
+		ptag.prependTo($('#result2'));
+	})
+	
+	$('#btn3').on('click', function(){
+		
+		// 랜덤 발생
+		rnd = parseInt(Math.random() * imgarr.length);
+		
+		//let vimg = "<img sec='../images/"+ imgarr[rnd] +"' alt='"+ imgarr[rnd] +"'>";
+		
+		//vimg = `<img src="../images/${imgarr[rnd]}" alt="${imgarr[rnd]}"`;
+		
+ 		let vimg = $("<img>", {
+			'src' : '../images/' + imgarr[rnd],
+			'alt' : imgarr[rnd]
+		}) 
+		
+		$('#result3').after(vimg);
+	})
+	
+	$('#btn4').on('click', function(){
+		
+		// 랜덤 발생
+		rnd = parseInt(Math.random() * imgarr.length);
+		
+ 		let vimg = $("<img>", {
+			'src' : '../images/' + imgarr[rnd],
+			'alt' : imgarr[rnd]
+		}) 
+		
+		$('#result4').before(vimg);
+ 		
+	})// btn4 종료
+	
+}) //$function 종료
+</script>
+
+<style>
+img {
+	width: 60px;
+	height: 60px;
+}
+</style>
+</head>
+<body>
+	<div class="box">
+		<h3>append : 해당요소의 맨뒤 새로운 요소를 추가한다</h3>
+		<h3>prepend : 해당요소의 맨앞 새로운 요소를 추가한다</h3>
+		<input type="button" value="append" id="btn1">
+		<input type="button" value="prepend" id="btn2">
+		
+		<div id="result1" class="result"></div>
+		<div id="result2" class="result"></div>
+	</div>
+	
+	<div class="box">
+		<h3>after : 해당요소의 맨뒤 새로운 요소를 추가한다</h3>
+		<h3>before : 해당요소의 맨앞 새로운 요소를 추가한다</h3>
+		<input type="button" value="after" id="btn3">
+		<input type="button" value="before" id="btn4">
+		<h3>선택요소의 테두리 밖에 추가</h3>
+		
+		<div id="result3" class="result"></div>
+		<div id="result4" class="result"></div>
+	</div>
+</body>
+</html>

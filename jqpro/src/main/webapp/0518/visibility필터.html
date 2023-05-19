@@ -20,16 +20,18 @@ $(document).ready(function(){
 		        	 vtype = $(this).attr('type')
 		        	 if(vtype == 'radio') {
 		        		 
-		        		 // 체크되어 있는 항목의 값을 가져온다
-			             str += this.tagName + 
-			             " [" + $(this).attr('name') + " : " + 
-			            	 $(':radio:checked').val() + "]<br>";
-		        		  
+		        		 if($(this).prop('checked')) {
+		        			 // 체크되어 있는 항목의 값을 가져온다
+		        			 str += this.tagName + 
+			             		" [" + $(this).attr('name') + " : " + 
+			            	 	$(this).val() + "]<br>";
+		        		 }
+		        		 
 		        	 } else {		// hidden text이고, input이지만 radio 타입이 아닌 것
 		        		 str += this.tagName +
 				            " [" + $(this).attr('name') + " : " +
 				               $(this).val() + "]<br>";
-		        	 }
+		        			 }
 
 		           
 		         } else if(this.tagName != "BR"){
@@ -62,7 +64,7 @@ $(document).ready(function(){
 	      
 	      $('#result3').html(str);
 	      
-   })
+ 	  })
 })
 </script>
 
@@ -85,6 +87,11 @@ $(document).ready(function(){
 
 
 	<div class="box">
+	<h3>라디오 버튼이 체크되어있는지 검사 - if문 이용</h3>
+	<h3>속성 상태 설정 : prop(속성, true) 또는 prop(속성, false) </h3>
+	<h3>속성 상태 얻기 : prop(속성)</h3>
+	<!-- checked, selected, disable, readonly, multiple 이런 속성 상태를 얻어 오기 위해 prop()를 쓰고 -->
+	<!-- id=?, value=? 등의 속성 값을 가져오기 위해 attr()을 씀 -->
 		<form id="testForm">
 			<input type="hidden" name="userAge" value="33">
 			<input
@@ -98,32 +105,10 @@ $(document).ready(function(){
 				<input type="radio" name="sung" value="여">여자<br>
 		</form>
 
-		<input type="button" value="hidden" id="hbtn2"> <input
-			type="button" value="visible" id="vbtn2">
+		<input type="button" value="hidden" id="hbtn2">
+		<input type="button" value="visible" id="vbtn2">
 		<div id="result3" class="result"></div>
 		<div id="result4" class="result"></div>
-	</div>
-
-
-	<div class="box">
-	<h3>라디오 버튼이 체크되어있는지 검사 - if문 이용</h3>
-		<form id="testForm">
-			<input type="hidden" name="userAge" value="33">
-			<input
-				type="hidden" name="userCity" value="대전"><br>
-				I D : <input
-				type="text" name="userID" value="hong"><br>
-				<span style="display: none">ID가 중복됩니다. </span> <br>
-				이름 : <input type="text" name="userName" value="홍길동"> <br>
-				<span style="visibility: hidden">이름을 입력하세요</span><br>
-				성별 : <input type="radio" name="sung" value="남" checked>남자 
-				<input type="radio" name="sung" value="여">여자<br>
-		</form>
-
-		<input type="button" value="hidden" id="hbtn3"> <input
-			type="button" value="visible" id="vbtn3">
-		<div id="result5" class="result"></div>
-		<div id="result6" class="result"></div>
 	</div>
 
 </body>
