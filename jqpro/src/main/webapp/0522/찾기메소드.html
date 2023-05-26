@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>찾기메소드</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.7.0.min.js"></script>
+<script>
+$(function(){
+	$('#next').click(function(){
+		$('#result1 .start').next().css({"border":"1px solid red", "color":"red"});
+	})
+	
+	$('#nexta').click(function(){
+		$('#result1 .start').nextAll().css({"border":"1px solid green", "color":"green"});
+	})
+	
+	$('#nextun').click(function(){
+		$('#result1 .start').nextUntil($('#result1 li:last')).css({"border":"1px solid #9933FF", "color":"#9933FF"});
+	})
+	
+	$('#prev').click(function(){
+		$('#result2 .start').prev().css({"border":"1px solid red", "color":"red"});
+	})
+	
+	$('#preva').click(function(){
+		$('#result2 .start').prevAll().css({"border":"1px solid green", "color":"green"});
+	})
+	
+	$('#prevun').click(function(){
+		$('#result2 .start').prevUntil($('#result2 li:first')).css({"border":"1px solid #9933FF", "color":"#9933FF"});
+	})
+
+	$('#parent').click(function(){
+		$('#result3 span').parent().css({"border":"2px solid red", "color":"red"});
+	})
+	
+	$('#parents').click(function(){
+		$('#result3 span').parents().css({"border":"2px solid green", "color":"green"});
+	})
+
+	$('#parentss').click(function(){
+		$('#result3 span').parents('ul').css({"border":"2px solid blue", "color":"blue"});
+	})
+
+	$('#parentsun').click(function(){
+		$('#result3 span').parentsUntil('#result3').css({"border":"2px solid #9933FF", "color":"#9933FF"});
+	})
+	
+	$('.btn').click(function(){
+/* 
+		$(this).prev()	// ul을 찾음
+		$(this).parent()	// 직속부모인 class siblings를 찾음
+		$(this).parents('.result')	// 조상들 중 특정값('') 선택. class result 찾음.
+ */		
+ 		$(this).prev().find('span').css({"border":"2px solid red", "color":"red"});
+ 		//this의 이전 형제요소를 찾음 -> 해당 요소에서 span태그를 찾음 -> 스타일 적용
+	})
+	
+})
+</script>
+<style>
+.siblings * { 
+	display: block;
+	border: 2px solid black;
+	color: black;
+	padding: 5px;
+	margin: 5px;
+}
+.box .result {
+	font-size: 1.0rem;
+}
+.start {
+	border: 1px solid blue;
+	color: blue;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+	
+	<input type="button" value="next" id="next">
+	<input type="button" value="nextall" id="nexta">
+	<input type="button" value="nextunt" id="nextun">
+	<div id="result1" class="result">
+		<div style="width:500px" class="siblings">
+			<ul>ul (parent)
+				<li>li (sibling)</li>
+		  		<li>li (sibling)</li>
+		    	<li class="start">li (sibling with class name "start")</li>
+		    	<li>li (the next sibling of li with class name "start")</li>
+		    	<li>li (sibling)</li>
+		    	<li>li (sibling)</li>
+		    	<li>li (sibling)</li>
+		    	<li>li (sibling)</li>
+		  	</ul>   
+		</div>
+	</div>
+</div>
+
+<div class="box">
+	<h3></h3>
+	
+	<input type="button" value="prev" id="prev">
+	<input type="button" value="prevall" id="preva">
+	<input type="button" value="prevunt" id="prevun">
+	<div id="result2" class="result">
+		<div style="width:500px;" class="siblings">
+			<ul>ul (parent)
+		    	<li>li (sibling)</li>
+		    	<li>li (sibling)</li>
+		    	<li>li (sibling)</li>
+				<li>li (sibling)</li>
+		  		<li>li (sibling)</li>
+		    	<li class="start">li (sibling with class name "start")</li>
+		    	<li>li (the next sibling of li with class name "start")</li>
+		    	<li>li (sibling)</li>
+		  	</ul>   
+		</div>
+	</div>
+</div>
+
+<div class="box">
+	<h3></h3>
+	
+	<input type="button" value="parent" id="parent">
+	<input type="button" value="parents" id="parents">
+	<input type="button" value="parentss" id="parentss">
+	<input type="button" value="parentsun" id="parentsun">
+	<div id="result3" class="result">
+		<div style="width:500px;" class="siblings">
+			<ul>ul (grandparent)  
+				<li>li (direct parent)
+					<span>span</span>
+				</li>
+			</ul>   
+		</div>
+	</div>
+</div>
+
+<div class="box">
+	<h3></h3>
+	
+	<div id="result4" class="result">
+		<div style="width:500px;" class="siblings">
+			<ul>ul (grandparent)  
+				<li>li (direct parent)
+					<span>span</span>
+				</li>
+			</ul>   
+			<input type="button" value="확인" class="btn">
+		</div>
+	</div>
+	
+	<div id="result5" class="result">
+		<div style="width:500px;" class="siblings">
+			<ul>ul (grandparent)  
+				<li>li (direct parent)
+					<span>span</span>
+				</li>
+			</ul>   
+			<input type="button" value="확인" class="btn">
+		</div>
+	</div>
+	
+</div>
+
+</body>
+</html>

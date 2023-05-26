@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>필터링메소드</title>
 <link rel="stylesheet" href="../css/mystyle.css">
 <script src="../js/jquery-3.7.0.min.js"></script>
 
@@ -19,7 +19,7 @@ $(function() {
 		$('p').last().css('background', 'skyblue')
 		$('p').eq(1).css('background', 'gold') */
 		
-		$('p').filter(':even').css('background', 'lightgreen')
+ 		$('p').filter(':even').css('background', 'lightgreen')
 		$('p').filter(':odd').css('background', 'pink')
 		$('p').filter(':first').css('background', 'gold')
 		
@@ -35,10 +35,21 @@ $(function() {
 	
 	//jquery형식
 	$('p').click(function(){
-		if($(this).) {		// $(this).부모.is(클래스result)
+		if($(this).parent().is('.result')) {		// $(this).부모.is(클래스result)
+			// this의 부모가 .result가 맞을 때
+			// 클릭한 p태그를 복사해서 부모에 붙여넣기 한다
+			// 글자색 빨강색으로 변경
+			
+			// 방법1
+ 			$(this).clone().appendTo($(this).parent()).css('color', 'red');
+			//clone(true)로 하면 이벤트를 통해 복사된 p태그도 클릭시 복붙됨
+			
+/*  		// 방법2
+			ptag = $(this).clone();
+			$(this).parent().append(ptag); 	// 또는 ptag.appendTo($(this).parent()) */
 			
 		} else {
-			
+			alert("해당 작업 대상이 아닙니다");
 		}
 	})
 	

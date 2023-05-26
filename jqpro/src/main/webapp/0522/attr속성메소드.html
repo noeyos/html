@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attr속성메소드</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.7.0.min.js"></script>
+<script>
+function proc1() {
+	$('img').attr('title', function(){
+		// img의 src 속성값 가져오기
+		vsrc = $(this).attr('src');		//$('img')로 하면 안 됨. 그러면 첫번째 img만 됨.
+		
+		// vsrc에서 이미지의 이름을 추출 - substring(), slice() 이용.
+		//								   substr()은 부적절. 글자수가 다 다르기 때문.
+		start = vsrc.lastIndexOf('/') + 1;
+		end = vsrc.lastIndexOf('.');
+
+		// 추출 - substring(start. end)
+		vtitle = vsrc.substring(start, end);
+		
+		// 추출한 값 리턴
+		return vtitle;
+	});
+}
+</script>
+<style>
+img {
+	width: 100px;
+	height: 100px;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+		
+	<input type="button" value="확인" onclick="proc1()">
+	<div id="result1" class="result">
+		<img alt="Jellyfish.jpg" src="../images/Jellyfish.jpg">
+		<img alt="Koala.jpg" src="../images/Koala.jpg">
+		<img alt="Penguins.jpg" src="../images/Penguins.jpg">
+		<img alt="ccc.jpg" src="../images/ccc.jpg">
+		<img alt="heart3.jpg" src="../images/heart3.jpg">
+	</div>
+</div>
+
+</body>
+</html>

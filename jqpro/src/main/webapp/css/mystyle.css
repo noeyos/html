@@ -15,8 +15,8 @@ pre {
 }
 
 .box {
-	border: 3px double blue;
-	 background-image: linear-gradient(to right, skyblue, white);
+	border: 3px double dodgerblue;
+	background-image: linear-gradient(to right, LightSteelBlue, white);
 	margin: 10px;
 	padding: 10px;
 	
@@ -32,7 +32,7 @@ pre {
 }
 
 .box .result {
-	border: 1px dotted red;
+	border: 1px dotted lightslategrey;
 	margin: 10px;
 	padding: 10px;
 	font-size: 1.5rem;

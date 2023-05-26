@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> </title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.7.0.min.js"></script>
+<script>
+
+// bind(원래 있는 요소 이벤트) . delegate(실행 도중 새롭게 생성되는 요소)
+$(function(){
+	
+/* 	//bind
+	$('#btn1').on('click', function() {
+				
+	}) */
+	
+	
+/* 	$('p').on('click', function(){
+		alert("냐세요")	// 실행안됨
+	}) */
+	
+	
+	$(document).on('click', 'p', function(){
+		idvalue = $(this).attr('class');
+		
+		$.ajax({
+			url: '/jqpro/buyerInfo.do',
+			type: 'get',
+			data: {"id" : idvalue},
+			success: function(res) {
+				code = "";
+				code        += `${res.id}<br>${res.name}`;
+			
+/* 					res.id
+					res.name
+					res.lgu
+					res.comtel
+					res.bank
+					res.bankno
+					res.bankname
+					res.mail
+					res.zip
+					res.add1
+					res.add2 */
+					
+					$('#detail').html(code);
+
+			},
+			error: function(xhr) {
+				alert("상태: " + xhr.status);
+			},
+			dataType: 'json'
+			
+		})
+	})
+	
+	//delegate
+	$(document).on('click', '#btn1', function() {
+		
+		$.ajax({
+			url: '/jqpro/buyerName.do',
+			type: 'get',
+			success: function(res) {
+				
+				code = "";
+				
+				$.each(res, function(i, v) {
+					code += `<p class="${res[i].id}">${res[i].name}</p>`
+				})
+				
+				$('#bname').html(code);
+				
+			},
+			error: function(xhr) {
+				alert("상태: " + xhr.status);
+			},
+			dataType: 'json'
+		})
+	})
+})
+</script>
+<style>
+table {
+	border: black;
+}
+
+td {
+	width: 200px;
+	height: auto;
+	padding: 5px;
+}
+
+#bname p:hover {
+	background: black;
+	color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+	<h3></h3>
+		
+	<input type="button" value="확인" id="btn1">
+	<div id="result1" class="result">
+		<table border="1">
+			<tr>
+				<td>거래처이름</td>
+				<td>거래처상세정보</td>
+			</tr>
+			
+			<tr>
+				<td id="bname"></td>
+				<td id="detail"></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+</body>
+</html>

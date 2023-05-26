@@ -177,3 +177,31 @@
 
 5월 16, 2023 10:18:43.169 NEW SESSION
 5월 16, 2023 10:18:43.169 [10600:17372:0516/101843.167:ERROR:interface_endpoint_client.cc(696)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+5월 22, 2023 13:22:57.159 NEW SESSION
+5월 22, 2023 13:22:57.159 [13268:6916:0522/132257.158:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+5월 22, 2023 13:51:36.752 [13268:6916:0522/135136.752:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+
+5월 24, 2023 12:18:07.119 NEW SESSION
+5월 24, 2023 12:18:07.119 [12760:6080:0524/121807.118:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+5월 24, 2023 12:18:07.119 ERROR: Couldn't read tbsCertificate as SEQUENCE
+5월 24, 2023 12:18:07.119 ERROR: Failed parsing Certificate
+5월 24, 2023 12:18:07.119 
+5월 24, 2023 12:18:07.146 [12760:6080:0524/121807.146:ERROR:cert_verify_proc_builtin.cc(679)] CertVerifyProcBuiltin for sync.hgrtb.com failed:
+5월 24, 2023 12:18:07.146 ----- Certificate i=0 (CN=sync.hgrtb.com) -----
+5월 24, 2023 12:18:07.146 ERROR: Time is after notAfter
+5월 24, 2023 12:18:07.147 
+5월 24, 2023 12:18:07.147 
+5월 24, 2023 12:18:07.697 [12760:6080:0524/121807.697:ERROR:cert_verify_proc_builtin.cc(679)] CertVerifyProcBuiltin for global.ib-ibi.com failed:
+5월 24, 2023 12:18:07.697 ----- Certificate i=0 (CN=*.ib-ibi.com,O=KBM Group LLC,L=Louisville,ST=Colorado,C=US) -----
+5월 24, 2023 12:18:07.698 ERROR: Time is after notAfter
+5월 24, 2023 12:18:07.698 
+5월 24, 2023 12:18:07.698 
+5월 24, 2023 12:18:49.413 [12760:6928:0524/121849.413:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.323 s for first_image_paint 0.307 s
+5월 24, 2023 12:18:49.526 [12760:6928:0524/121849.526:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.323 s for first_image_paint 0.307 s
+5월 24, 2023 12:18:50.35 [12760:6928:0524/121850.035:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.323 s for first_image_paint 0.307 s
+5월 24, 2023 12:18:51.595 [12760:6928:0524/121851.595:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.323 s for first_image_paint 0.307 s
+5월 24, 2023 12:18:51.606 [12760:6928:0524/121851.606:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.323 s for first_image_paint 0.307 s
+5월 24, 2023 12:18:51.727 [12760:6928:0524/121851.727:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.323 s for first_image_paint 0.307 s
+5월 24, 2023 12:18:51.842 [12760:6928:0524/121851.842:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.323 s for first_image_paint 0.307 s
+5월 24, 2023 12:18:51.941 [12760:6928:0524/121851.941:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.323 s for first_image_paint 0.307 s
