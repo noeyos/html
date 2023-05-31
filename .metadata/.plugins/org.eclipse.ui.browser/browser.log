@@ -205,3 +205,17 @@
 5월 24, 2023 12:18:51.727 [12760:6928:0524/121851.727:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.323 s for first_image_paint 0.307 s
 5월 24, 2023 12:18:51.842 [12760:6928:0524/121851.842:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.323 s for first_image_paint 0.307 s
 5월 24, 2023 12:18:51.941 [12760:6928:0524/121851.941:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.323 s for first_image_paint 0.307 s
+
+5월 30, 2023 09:26:27.724 NEW SESSION
+5월 30, 2023 09:26:27.724 [7396:14868:0530/092627.723:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+5월 30, 2023 09:26:27.724 ERROR: Couldn't read tbsCertificate as SEQUENCE
+5월 30, 2023 09:26:27.724 ERROR: Failed parsing Certificate
+5월 30, 2023 09:26:27.724 
+5월 30, 2023 09:26:27.763 [7396:14868:0530/092627.763:ERROR:cert_verify_proc_builtin.cc(679)] CertVerifyProcBuiltin for sync.hgrtb.com failed:
+5월 30, 2023 09:26:27.764 ----- Certificate i=0 (CN=sync.hgrtb.com) -----
+5월 30, 2023 09:26:27.764 ERROR: Time is after notAfter
+5월 30, 2023 09:26:27.764 
+5월 30, 2023 09:26:27.764 
+5월 30, 2023 13:31:00.507 [6960:19208:0530/133100.506:ERROR:interface_endpoint_client.cc(696)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 30, 2023 13:31:10.478 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+5월 30, 2023 13:31:17.740 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)

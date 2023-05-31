@@ -2,7 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title> </title>
+<title>buyer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="../css/mystyle.css">
 <script src="../js/jquery-3.7.0.min.js"></script>
 <script>
@@ -29,9 +32,22 @@ $(function(){
 			type: 'get',
 			data: {"id" : idvalue},
 			success: function(res) {
-				code = "";
-				code        += `${res.id}<br>${res.name}`;
-			
+				code = `<table class='table table-dark table-hover'>`;
+				
+				code += `<tr><td>BUYER_ID</td><td>${res.id}</td></tr>
+					<tr><td>BUYER_NAME</td><td>${res.name}</td></tr>
+					<tr><td>BUYER_LGU</td><td>${res.lgu}</td></tr>
+					<tr><td>BUYER_COMTEL</td><td>${res.comtel}</td></tr>
+					<tr><td>BUYER_BANK</td><td>${res.bank}</td></tr>
+					<tr><td>BUYER_BANKNO</td><td>${res.bankno}</td></tr>
+					<tr><td>BUYER_BANKNAME</td><td>${res.bankname}</td></tr>
+					<tr><td>BUYER_MAIL</td><td>${res.mail}</td></tr>
+					<tr><td>BUYER_ZIP</td><td>${res.zip}</td></tr>
+					<tr><td>BUYER_ADD1</td><td>${res.add1}</td></tr>
+					<tr><td>BUYER_ADD2</td><td>${res.add2}</td></tr>`;
+				
+				
+				
 /* 					res.id
 					res.name
 					res.lgu
@@ -85,11 +101,18 @@ table {
 	border: black;
 }
 
-td {
-	width: 200px;
+#detail {
+	width: 250px;
 	height: auto;
 	padding: 5px;
 }
+
+#bname {
+	width: 150px;
+	height: auto;
+	padding: 5px;
+}
+
 
 #bname p:hover {
 	background: black;
@@ -104,7 +127,7 @@ td {
 		
 	<input type="button" value="확인" id="btn1">
 	<div id="result1" class="result">
-		<table border="1">
+		<table border="1" class="table table-dark">
 			<tr>
 				<td>거래처이름</td>
 				<td>거래처상세정보</td>

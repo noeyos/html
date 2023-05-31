@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> </title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.7.0.min.js"></script>
+<script>
+$(function(){
+	
+	// 실행하자마자 lprod 실행(출력)
+	$.ajax({
+		url : '/jqpro/lprodList.do',
+		type: 'get',
+		success: function(res) {
+			code = "";
+			
+			$.each(res, function(i,v){
+				
+/*				code += "<option value='P101'>컴퓨터제품</option>"         */
+				code += `<option value='${v.gu}'>${v.nm}</option>`
+				
+			})
+			
+			$('#lprod').html(code);
+			$('#lprod').trigger('change');
+		},
+		error: function(xhr) {
+			alert("상태: " + xhr.status)
+		},
+		dataType: 'json' 
+	}) // lprod 끝
+	
+	// lprod를 선택하면 gu값을 얻어서 prod의 목록을 출력한다
+	$('#lprod').on('change', function(){
+		// this => select. 값은 option에서 얻어온다.
+		// select와 option은 부모-자식
+		// 부모 자식 나타낼 때 $('부모 자식')
+		// 그런데 this는 따옴표 안에 못 들어감. 그래서 쉼표로 나타내줌.
+		$('option:selected', this).val();
+//		$('#lprod option:selected').val();   <== 이렇게도 가능하다 
+		
+		guvalue = $('option:selected', this).val();
+		
+		$.ajax({
+			url : '/jqpro/prodList.do',
+			data: {"gu" : guvalue},
+			type: 'post',
+			success: function(res){
+				code = "";
+				if(res.flag == "ok"){
+					$.each(res.datas, function(i,v) {	// res.datas[i] == v
+						code += `<option value="${v.id}">${v.name}</option>`
+					})
+				} else {
+					code += `<option value=0>데이터없음</option>`
+					
+					// detail이 없기 때문에 img를 출력한다
+					vimg = $('<img src="../images/spongebob.png" alt="spongebob.png">');
+					$('#result1').html(vimg);
+				}
+				$('#prod').html(code);		// 기존 데이터 덮어쓰기
+				//$('#prod').append(code);	// 기존 데이터 살리고 추가로 작성
+				$('#prod').trigger('change');
+			},
+			error: function(xhr) {
+				alert("상태: " + xhr.status);
+			},
+			dataType: 'json'
+			
+		}) // ajax 끝
+		
+	}) // prod on change 끝
+	
+	
+	// prod를 선택하면 option의 value값 - id 을 얻어서 서버로 전송
+	// option의 value값이 0이면 아무것도 수행하지 않는다.
+	$("#prod").on('change', function(){
+		idvalue = $('#prod option:selected').val();
+		
+		$.ajax({
+			url: "http://localhost/jqpro/prodDetail.do",
+			data: {"id": idvalue},
+			type: 'post',
+			success: function(res) {
+				code = "<table border='1'>";
+				code += "<tr><td>항목</td><td>내용</td></tr>";
+				code += "<tr><td>PROD_ID</td><td>" + res.id + "</td></tr>";
+				code += "<tr><td>PROD_NAME</td><td>" + res.name + "</td></tr>";
+				code += "<tr><td>PROD_LGU</td><td>" + res.lgu + "</td></tr>";
+				code += "<tr><td>PROD_BUYER</td><td>" + res.buyer + "</td></tr>";
+				code += "<tr><td>PROD_COST</td><td>" + res.cost + "</td></tr>";
+				code += "<tr><td>PROD_PRICE</td><td>" + res.price + "</td></tr>";
+				code += "<tr><td>PROD_SALE</td><td>" + res.sale + "</td></tr>";
+				code += "<tr><td>PROD_OUTLINE</td><td>" + res.outline + "</td></tr>";
+				code += "<tr><td>PROD_DETAIL</td><td>" + res.detail + "</td></tr>";
+				code += "<tr><td>PROD_SIZE</td><td>" + res.size + "</td></tr>";
+				code += "<tr><td>PROD_COLOR</td><td>" + res.color + "</td></tr>";
+				code += "</table>";
+				
+				$('#result1').html(code);
+			},
+			error: function(xhr) {
+				alert("상태 : " + xhr.status);				
+			},
+			dataType: "json"
+		})
+	})
+	
+})
+</script>
+<style>
+img {
+	width: 100px;
+}
+
+table {
+	background: white;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+	<select id="lprod"></select>
+	
+	<select id="prod"></select>
+	
+	<div id="result1" class="result"></div>
+</div>
+
+</body>
+</html>
