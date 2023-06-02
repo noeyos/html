@@ -219,3 +219,12 @@
 5월 30, 2023 13:31:00.507 [6960:19208:0530/133100.506:ERROR:interface_endpoint_client.cc(696)] Message 0 rejected by interface blink.mojom.WidgetHost
 5월 30, 2023 13:31:10.478 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
 5월 30, 2023 13:31:17.740 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+
+6월 02, 2023 09:43:06.438 NEW SESSION
+6월 02, 2023 09:43:06.438 [16656:15332:0602/094306.437:ERROR:cert_verify_proc_builtin.cc(679)] CertVerifyProcBuiltin for global.ib-ibi.com failed:
+6월 02, 2023 09:43:06.439 ----- Certificate i=0 (CN=*.ib-ibi.com,O=KBM Group LLC,L=Louisville,ST=Colorado,C=US) -----
+6월 02, 2023 09:43:06.439 ERROR: Time is after notAfter
+6월 02, 2023 09:43:06.440 
+6월 02, 2023 09:43:06.440 
+6월 02, 2023 12:23:10.556 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+6월 02, 2023 12:42:53.232 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)

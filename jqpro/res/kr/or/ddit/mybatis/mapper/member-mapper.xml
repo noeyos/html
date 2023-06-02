@@ -10,6 +10,25 @@
     <select id="getAllMember" resultType="memVo">
     	select * from mymember
     </select>
+    
+    
+    <!-- 아이디 중복검사 -->
+    <select id="checkUserId" parameterType="String" resultType="String">
+    	select mem_id from member where mem_id=#{mem_id}
+    </select>
+    
+    
+    <!-- 저장하기 -->
+    <insert id="uploadUser" parameterType="memVo">
+    	insert into member(mem_id, mem_name, mem_bir, mem_pass, mem_hp, mem_mail, mem_zip, mem_add1, mem_add2)
+    	values(#{mem_id}, #{mem_name}, #{mem_bir}, #{mem_pass}, #{mem_hp}, #{mem_mail}, #{mem_zip}, #{mem_add1}, #{mem_add2})
+    </insert>
+    
+    
+    <!-- 우편번호 검색하기 -->
+    <select id="searchZip" parameterType="String" resultType="zipVo">
+    	select * from ziptb where dong like #{dong}||'%'
+    </select>
  
  
 </mapper>
