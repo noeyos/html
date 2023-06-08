@@ -228,3 +228,17 @@
 6월 02, 2023 09:43:06.440 
 6월 02, 2023 12:23:10.556 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
 6월 02, 2023 12:42:53.232 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+
+6월 05, 2023 10:38:36.878 NEW SESSION
+6월 05, 2023 10:38:36.879 [15588:16200:0605/103836.877:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+6월 05, 2023 10:38:36.879 ERROR: Couldn't read tbsCertificate as SEQUENCE
+6월 05, 2023 10:38:36.879 ERROR: Failed parsing Certificate
+6월 05, 2023 10:38:36.879 
+6월 05, 2023 10:38:36.912 [15588:16200:0605/103836.912:ERROR:cert_verify_proc_builtin.cc(679)] CertVerifyProcBuiltin for sync.hgrtb.com failed:
+6월 05, 2023 10:38:36.912 ----- Certificate i=0 (CN=sync.hgrtb.com) -----
+6월 05, 2023 10:38:36.912 ERROR: Time is after notAfter
+6월 05, 2023 10:38:36.912 
+6월 05, 2023 10:38:36.912 
+6월 05, 2023 13:21:17.673 [15588:13160:0605/132117.673:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+6월 05, 2023 13:33:52.277 [15588:13160:0605/133352.276:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+6월 05, 2023 13:33:53.781 [15588:13160:0605/133353.781:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105

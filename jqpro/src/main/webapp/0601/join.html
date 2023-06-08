@@ -118,8 +118,22 @@ $(function(){
 		fdata = "id="+vid+"&name="+vname+"&pass="+vpass+"&bir="+vbir+"&hp="+vhp+"&mail="+vmail
 		
 */		
-		fdata1 = $('form').serialize();		//문자열 형식 윗줄 애처럼
+		fdata1 = $('form').serialize();		//문자열 형식
+		/* fdata1 = "id="+vid+"&name="+vname+"&pass="+vpass+"&bir="+vbir+"&hp="+vhp+"&mail="+vmail... */
 		fdata2 = $('form').serializeJSON();	//JSON형식 (like 객체)
+		/*
+		fdata2 = {
+			"id" : vid,
+			"name" : vname,
+			"pass" : vpass,
+			"bir" : vbir,
+			"hp" : vhp,
+			"mail" : vmail,
+			"zip" : vzip,
+			"vadd1" : vadd1,
+			"vadd2" : vadd2
+		}
+		*/
 		
 		console.log(fdata1);
 		console.log(fdata2);
@@ -130,7 +144,8 @@ $(function(){
 			data: fdata2,
 			type: 'post',
 			success: function(res) {
-				alert(res.flag);
+				//alert(res.flag);
+				$('#joinsp').html(res.flag).css('color', 'red');
 			},
 			error: function(xhr) {
 				alert("오류 : " + xhr.status);
