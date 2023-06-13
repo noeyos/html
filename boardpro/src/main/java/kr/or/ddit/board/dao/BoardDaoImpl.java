@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import kr.or.ddit.board.vo.BoardVO;
 import kr.or.ddit.board.vo.PageVO;
+import kr.or.ddit.board.vo.ReplyVO;
 import kr.or.ddit.mybatis.config.MyBatisSqlSessionFactory;
 
 public class BoardDaoImpl implements IBoardDao{
@@ -80,5 +81,119 @@ public class BoardDaoImpl implements IBoardDao{
 		}
 		return res;
 	}
+
+	@Override
+	public int updateBoard(BoardVO vo) {
+		int res = 0;
+		SqlSession session = MyBatisSqlSessionFactory.getSqlSession();
+		try {
+			res = session.update("board.updateBoard",vo);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			session.commit();
+			session.close();
+			
+		}
+		return res;
+	}
+
+	@Override
+	public int deleteBoard(int num) {
+		int res = 0;
+		SqlSession session = MyBatisSqlSessionFactory.getSqlSession();
+		try {
+			res = session.delete("board.deleteBoard",num);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			session.commit();
+			session.close();
+			
+		}
+		return res;
+	}
+
+	@Override
+	public int updateHit(int num) {
+		int hit = 0;
+		SqlSession session = MyBatisSqlSessionFactory.getSqlSession();
+		try {
+			hit = session.update("board.updateHit",num);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			session.commit();
+			session.close();
+		}
+		return hit;
+	}
+
+	@Override
+	public int insertReply(ReplyVO vo) {
+		SqlSession session = null;
+		int cnt = 0;
+		try {
+			session = MyBatisSqlSessionFactory.getSqlSession();
+			cnt = session.insert("reply.insertReply", vo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.commit();
+			session.close();
+		}
+		return cnt;
+	}
+
+	@Override
+	public List<ReplyVO> listReply(int bonum) {
+		SqlSession session = null;
+		List<ReplyVO> list = null;
+		try {
+			session = MyBatisSqlSessionFactory.getSqlSession();
+			list = session.selectList("reply.listReply", bonum);
+		} catch (Exception e) {
+			// TODO: handle exception
+		} finally {
+			session.close();
+		}
+		return list;
+	}
+
+	@Override
+	public int updateReply(ReplyVO vo) {
+		SqlSession session = null;
+		int cnt = 0;
+		try {
+			session = MyBatisSqlSessionFactory.getSqlSession();
+			cnt = session.update("reply.updateReply", vo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.commit();
+			session.close();
+		}
+		return cnt;
+	}
+
+	@Override
+	public int deleteReply(int renum) {
+		SqlSession session = null;
+		int cnt = 0;
+		try {
+			session = MyBatisSqlSessionFactory.getSqlSession();
+			cnt = session.delete("reply.deleteReply", renum);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.commit();
+			session.close();
+		}
+		return cnt;
+	}
+
 
 }

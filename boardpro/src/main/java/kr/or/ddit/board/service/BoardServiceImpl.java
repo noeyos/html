@@ -8,6 +8,7 @@ import kr.or.ddit.board.dao.BoardDaoImpl;
 import kr.or.ddit.board.dao.IBoardDao;
 import kr.or.ddit.board.vo.BoardVO;
 import kr.or.ddit.board.vo.PageVO;
+import kr.or.ddit.board.vo.ReplyVO;
 
 public class BoardServiceImpl implements IBoardService{
 	// 자기 자신의 클래스 객체 선언, 생성, 리턴 
@@ -77,6 +78,48 @@ public class BoardServiceImpl implements IBoardService{
 	@Override
 	public int insertBoard(BoardVO vo) {
 		return dao.insertBoard(vo);
+	}
+
+	@Override
+	public int updateBoard(BoardVO vo) {
+		// TODO Auto-generated method stub
+		return dao.updateBoard(vo);
+	}
+
+	@Override
+	public int deleteBoard(int num) {
+		// TODO Auto-generated method stub
+		return dao.deleteBoard(num);
+	}
+
+	@Override
+	public int updateHit(int num) {
+		// TODO Auto-generated method stub
+		return dao.updateHit(num);
+	}
+
+	@Override
+	public int insertReply(ReplyVO vo) {
+		// TODO Auto-generated method stub
+		return dao.insertReply(vo);
+	}
+
+	@Override
+	public List<ReplyVO> listReply(int bonum) {
+		// TODO Auto-generated method stub
+		return dao.listReply(bonum);
+	}
+
+	@Override
+	public int updateReply(ReplyVO vo) {
+		// TODO Auto-generated method stub
+		return dao.updateReply(vo);
+	}
+
+	@Override
+	public int deleteReply(int renum) {
+		// TODO Auto-generated method stub
+		return dao.deleteBoard(renum);
 	}
 
 }

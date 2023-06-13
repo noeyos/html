@@ -13,7 +13,7 @@
    <where>
       <if test="!(stype == '' or sword == '')">
            ${stype} like  '%'||#{sword}||'%'
-       </if>
+      </if>
    </where>
 </sql>
 
@@ -33,6 +33,7 @@
 	select count(*) from boardtab
     	 <include refid="dynamicCondition"/> 
 </select>
+
 <insert id="insertBoard" parameterType="boardvo">
       insert into boardtab 
       values(
@@ -46,5 +47,26 @@
       #{wip},
       sysdate
       )
-   </insert>
+</insert>
+
+<update id="updateBoard" parameterType="boardvo">
+	update boardtab set writer = #{writer},
+						mail = #{mail},
+						password = #{password},
+						subject = #{subject},
+						content = #{content}
+						where num = #{num}
+</update>
+
+<delete id="deleteBoard" parameterType="int">
+	delete from boardtab where num = #{num}
+</delete>
+
+<update id="updateHit" parameterType="int">
+	update boardtab
+	set hit = hit+1
+	where num = #{num}
+</update>
+
+
 </mapper>

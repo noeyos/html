@@ -28,6 +28,7 @@ public class BoardList extends HttpServlet {
 		// 1. 요청시 전송 데이터 받기(from ajax) - 페이지 번호, 검색시 stype, sword   
 		int page = Integer.parseInt(request.getParameter("page"));
 		// page = 최초실행시 무조건 1 
+		
 		String stype = request.getParameter("stype");
 		String sword = request.getParameter("sword");
 		// stype, sword는 최초 실행시 값이 null 
