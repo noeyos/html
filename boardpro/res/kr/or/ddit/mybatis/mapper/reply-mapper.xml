@@ -16,7 +16,7 @@
 </select>
 
 <update id="updateReply" parameterType="replyvo">
-	update replytab set name=#{name}, cont=#{cont}, redate=sysdate where renum = #{renum}
+	update replytab set cont=#{cont}, redate=sysdate where renum = #{renum}
 </update>
 
 <delete id="deleteReply" parameterType="int">

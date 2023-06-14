@@ -1,6 +1,47 @@
 /**
  * 
  */
+replyUpdateServer = function() {
+	$.ajax({
+		url : `${myPath}/ReplyUpdate.do`,
+		data: reply,
+		type: 'post',
+		success: function(res) {
+			//alert(res.flag);
+			if(res.flag=="성공") { 
+				// 화면을 수정
+				p3.html(cont);
+			}
+		},
+		error: function(xhr) {
+			alert(xhr.status);
+		},
+		dataType: 'json'
+	})
+}
+
+
+
+replyDeleteServer = function() {
+	$.ajax({
+		url:`${myPath}/ReplyDelete.do`,
+		data: {"renum" : vidx},
+		type: 'get',
+		success: function(res) {
+			alert(res.flag);
+			
+			// 화면삭제
+			vdelete.parents('.reply-body').remove();
+		},
+		error: function(xhr) {
+			alert(xhr.status);
+		},
+		dataType: 'json'
+		
+	})
+}
+
+
 replyListServer = function() {
 	$.ajax({
 		url: `${myPath}/ReplyList.do`,
@@ -33,8 +74,8 @@ replyListServer = function() {
 			
 			// 등록버튼 또는 제목(this=vreply)을 기준으로 card-body를 찾아서 reply-body(rcode)를 추가(append)한다.
 			
-			vreply.parents('.card').find('.reply-body').remove();
-			vreply.parents('.card').find('.card-body').append(rcode);
+			$(vreply).parents('.card').find('.reply-body').remove();
+			$(vreply).parents('.card').find('.card-body').append(rcode);
 		},
 		error: function(xhr) {
 			alert(xhr.status);
@@ -73,7 +114,7 @@ replyInsertServer = function () {
 boardHitUpdate = function(){
 	$.ajax({
 		url: `${myPath}/BoardHit.do`,
-		data: {"num" : vhidx},
+		data: {"num" : vidx},
 		type: 'get',
 		success: function(res) {
 			// 성공하면 화면의 조회수 변경

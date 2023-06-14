@@ -54,7 +54,7 @@ input[name=reply] {
 
 nav a {
 	display: none;
-	visibility: hidden;
+	visibility: hidden;	/* 영역존재 */
 }
 
 .reply-body {
@@ -63,9 +63,20 @@ nav a {
 	border: 1px dotted orange;
 	background: #faf1f3;
 }
+
+#modiform {
+	display: none; /* 안 보이면 영역X */
+}
 </style>
 </head>
 <body>
+
+	<div id="modiform">
+		<textarea rows="5" cols="30"></textarea>
+		<input type="button" value="확인" id="modisend">
+		<input type="button" value="취소" id="modireset">
+	</div>
+	
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="javascript:void(0)">Logo</a>
@@ -202,16 +213,37 @@ $('#search').on('click', function() {
 $(document).on('click', '#next', function() {
 	currentPage = parseInt($('.pageno').last().text()) + 1;
 	listPageServer(currentPage);
+	
+	// 다른 곳에 modiform에 열려있는지 확인
+	if($('#modiform').css('display')!="none") {
+		// 열려있다
+		replyReset(); // 이미 열려있는 modiform을 body 안으로 이동
+	}
+	
 })
 // 이전(Prev) 버튼 이벤트 
 $(document).on('click', '#prev', function() {
 	currentPage = parseInt($('.pageno').first().text()) - 1;
 	listPageServer(currentPage);
+	
+	// 다른 곳에 modiform에 열려있는지 확인
+	if($('#modiform').css('display')!="none") {
+		// 열려있다
+		replyReset(); // 이미 열려있는 modiform을 body 안으로 이동
+	}
+	
 })
 // 페이지 번호 클릭 이벤트 
 $(document).on('click', '.pageno', function() {
 	currentPage = parseInt($(this).text().trim());
 	listPageServer(currentPage);
+	
+	// 다른 곳에 modiform에 열려있는지 확인
+	if($('#modiform').css('display')!="none") {
+		// 열려있다
+		replyReset(); // 이미 열려있는 modiform을 body 안으로 이동
+	}
+	
 })
 
 // 글쓰기 이벤트 
@@ -295,10 +327,97 @@ $(document).on('click', '.action', function() {
 		
 		// 서버로 전송
 		replyInsertServer();
+	} else if (vname == "r_delete") {
+		alert(vidx + "번 댓글을 삭제합니다.")
+		
+		vdelete = $(this);
+		
+		replyDeleteServer(); 
+		
+	} else if (vname =="r_modify") {
+		alert(vidx + "번 댓글을 수정합니다.")
+		vmodify = $(this);
+		
+		// $(this).parents('.p12').next();
+		vp3 = $(this).parents('.reply-body').find('.p3');
+		
+		// 다른 곳에 modiform에 열려있는지 확인
+		if($('#modiform').css('display')!="none") {
+			// 열려있다
+			replyReset(); // 이미 열려있는 modiform을 body 안으로 이동
+		}
+		
+		
+		// 원래 내용 가져오기
+		rcont = vp3.html();	// <br>태그 포함
+		//trim() => 앞뒤공백자르기
+		
+		// <br>태그 \n으로 바꾸기
+		cont = rcont.replace(/<br>/g, "\n");
+
+		// 공백 변경한 내용 수정창에 출력
+		$('#modiform textarea').val(cont);
+		
+		vp3.empty().append($('#modiform'));
+		
+		$('#modiform').show();
+		//$('#modiform').css('display', "block");
+		
+		
 	}
 	
+}) // click
+
+
+replyReset = function() {
+	// 현재 열려있는 modiform을 기준으로 p3을 찾는다
+	p3 = $('#modiform').parent();
+	
+	//modiform을 body로 이동한다
+	//$('#modiform').appendTo($('body'));
+	$('body').append($('#modiform'));
+	
+	// modiform을 body에서 안 보이게 설정
+	$('#modiform').hide();
+	//$('#modiform').css('display', 'none');
+	
+	// 원래 내용을 p3으로 다시 보이게 한다
+	p3.html(rcont);
+	
+}
+
+//modiform - 댓글 수정에서 취소 버튼을 클릭하면
+$('#modireset').on('click', function() {
+	replyReset();
+})
+
+
+//modiform - 댓글 수정에서 확인 버튼을 클릭하면
+$('#modisend').on('click', function () {
+	// 새롭게 입력한 값을 가져온다
+	newcont = $('#modiform textarea').val();	// 엔터기호 포함
+	
+	// 엔터 기호를 다시 <br>태그로 변경
+	cont = newcont.replace(/\n/g, "<br>");
+	
+	// p3을 찾는다 - modiform을 기준으로
+	p3 = $('#modiform').parent();
+	
+	// modiform을 body로 이동 - 안 보이게 설정
+	$('body').append($('#modiform'));
+	$('#modiform').hide();
+	
+	// 서버로 전송 - db수정 - newcont, vidx
+	reply = {};
+	reply.cont = newcont;
+	reply.renum = vidx;
+	
+	replyUpdateServer();
+	
+	// <br>로 변경한 내용 p3에 넣기 - db 수정 성공후에
 	
 })
+
 // 수정 모달창에서 데이터 수정 후 전송 버튼 클릭 이벤트 
 $('#usend').on('click', function() {
 // 수정해서 입력한 모든 값을 가져온다 
@@ -321,7 +440,7 @@ $(document).on('click', '.card a', function(){
 	
 	vreply = $(this);	// 제목
 	
-	vhidx = $(this).attr('idx');
+	vidx = $(this).attr('idx');
 	// alert($(this).attr('aria-expanded'));
 	hitattr = $(this).attr('aria-expanded');
 
@@ -341,6 +460,9 @@ $(document).on('click', '.card a', function(){
 		replyListServer();
 		// 제목 클릭해서 아코디언 펼칠 때 댓글도 보이게
 })
+
+
+
 </script>
 </body>
 </html>

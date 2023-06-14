@@ -119,7 +119,7 @@ public class BoardServiceImpl implements IBoardService{
 	@Override
 	public int deleteReply(int renum) {
 		// TODO Auto-generated method stub
-		return dao.deleteBoard(renum);
+		return dao.deleteReply(renum);
 	}
 
 }

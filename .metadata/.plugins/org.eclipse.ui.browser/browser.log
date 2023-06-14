@@ -242,3 +242,10 @@
 6월 05, 2023 13:21:17.673 [15588:13160:0605/132117.673:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
 6월 05, 2023 13:33:52.277 [15588:13160:0605/133352.276:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
 6월 05, 2023 13:33:53.781 [15588:13160:0605/133353.781:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+
+6월 14, 2023 13:21:12.603 NEW SESSION
+6월 14, 2023 13:21:12.603 [17624:5948:0614/132112.602:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+6월 14, 2023 13:49:24.280 [17624:7372:0614/134924.280:ERROR:get_updates_processor.cc(264)] PostClientToServerMessage() failed during GetUpdates with error 2
+6월 14, 2023 13:49:24.284 [17624:5948:0614/134924.284:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+6월 14, 2023 13:49:25.776 [17624:5948:0614/134925.776:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+6월 14, 2023 13:49:25.776 [17624:21164:0614/134925.776:ERROR:get_updates_processor.cc(264)] PostClientToServerMessage() failed during GetUpdates with error 2
