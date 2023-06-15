@@ -1,8 +1,8 @@
 package kr.or.ddit.board.vo;
 
 public class PageVO {
-   private int start;         // 시작번호(페이지당 보여지는 글의 고유 번호)
-   private int end;         // 끝번호(페이지당 보여지는 글의 고유 번호)
+   private int start;         // 시작번호(rownum)
+   private int end;         // 끝번호(rownum)
    
    private int startPage;       // 시작페이지번호
    private int endPage;      // 끝페이지번호
